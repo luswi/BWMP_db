@@ -149,6 +149,44 @@ namespace BWMP_db.classes
             return isSuccess;
         }
         // delete from our databaseee
+        public bool Delete(vesselClass v)
+        {
+            //Create default return value and set it to false
+            bool isSuccess = false;
+
+            //create sql connection
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            try
+            {
+                //SQL to dalete data
+                string sql = "DELETE FROM data WHERE MainId=@MainId";
+                //Create SQL Command
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                //create parameters to delete
+                cmd.Parameters.AddWithValue("@MainId", v.MainId);
+                //open database connection
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+                if(rows>0)
+                {
+                    isSuccess = true;
+                }
+                else
+                {
+                    isSuccess = false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return isSuccess;
+        }
 
 
     }
