@@ -47,14 +47,6 @@ namespace BWMP_db
 
         }
 
-        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            //Get data from data grid and load it to the textboxes.
-            int rowIndex = e.RowIndex;
-            textboxVesselId.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
-            textboxVesselName.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
-            
-        }
 
         private void BWMP_db_Load(object sender, EventArgs e)
         {
@@ -72,6 +64,18 @@ namespace BWMP_db
             comboboxVesselStatus.Text = "";
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Get data from data grid and load it to the textboxes.
+            int rowIndex = e.RowIndex;
+            textboxVesselId.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
+            textboxVesselName.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
+        }
 
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            //Clear Data
+            Clear();
+        }
     }
 }
