@@ -61,6 +61,8 @@ namespace BWMP_db
             //Load data into data grid after app start
             DataTable dt = v.Select();
             dataGridView1.DataSource = dt;
+            //Hide column
+            dataGridView1.Columns["MainId"].Visible=false;
         }
         //clear method
         public void Clear()
@@ -69,6 +71,7 @@ namespace BWMP_db
             textboxVesselName.Text = "";
             comboboxVesselStatus.Text = "";
         }
+
 
     }
 }
