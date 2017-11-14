@@ -74,7 +74,7 @@ namespace BWMP_db
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            //Clear Data
+            //Clear Data.
             Clear();
         }
     }
