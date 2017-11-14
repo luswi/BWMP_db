@@ -31,6 +31,8 @@ namespace BWMP_db
             {
                 //Succesfully inserted
                 MessageBox.Show("New vessel succesfully inserted");
+                //Clear method
+                Clear();
             }
             else
             {
@@ -50,6 +52,7 @@ namespace BWMP_db
             //Get data from data grid and load it to the textboxes.
             int rowIndex = e.RowIndex;
             textboxVesselId.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
+            textboxVesselName.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
             
         }
 
@@ -59,7 +62,13 @@ namespace BWMP_db
             DataTable dt = v.Select();
             dataGridView1.DataSource = dt;
         }
-
+        //clear method
+        public void Clear()
+        {
+            textboxVesselId.Text = "";
+            textboxVesselName.Text = "";
+            comboboxVesselStatus.Text = "";
+        }
 
     }
 }
