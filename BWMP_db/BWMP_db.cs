@@ -48,6 +48,8 @@ namespace BWMP_db
         }
 
 
+
+
         private void BWMP_db_Load(object sender, EventArgs e)
         {
             //Load data into data grid after app start
@@ -68,6 +70,7 @@ namespace BWMP_db
         {
             //Get data from data grid and load it to the textboxes.
             int rowIndex = e.RowIndex;
+            textboxMainId.Text = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
             textboxVesselId.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
             textboxVesselName.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
         }
@@ -77,5 +80,31 @@ namespace BWMP_db
             //Clear Data.
             Clear();
         }
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            // get data from texboxes
+            //we need to convert from string to int using Parse
+            v.MainId = int.Parse(textboxMainId.Text);
+            v.VesselId = textboxVesselId.Text;
+            v.VesselName = textboxVesselName.Text;
+            v.VesselStatus = comboboxVesselStatus.Text;
+                        
+            //update data in database
+            bool success = v.Update(v);
+            if (success == true)
+            {
+                //updated successfully
+                MessageBox.Show("Data updated");
+
+            }
+            else
+            {
+                //fail
+                MessageBox.Show("Update failed");
+            }
+
+
+        }
+
     }
 }

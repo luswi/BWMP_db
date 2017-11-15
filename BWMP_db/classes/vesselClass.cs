@@ -117,13 +117,14 @@ namespace BWMP_db.classes
             try
             {
                 //SQL to update our data
-                string sql = "UPDATE date SET VesselId=@VesselId, VesselName=@VesselName, VesselStatus=@VesselStatus";
+                string sql = "UPDATE date SET VesselId=@VesselId, VesselName=@VesselName, VesselStatus=@VesselStatus WHERE MainId=@MainId";
                 //Creating SQL command
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //create parameters to add data
                 cmd.Parameters.AddWithValue("@VesselId", v.VesselId);
                 cmd.Parameters.AddWithValue("@VesselName", v.VesselName);
                 cmd.Parameters.AddWithValue("@VesselStatus", v.VesselStatus);
+                cmd.Parameters.AddWithValue("@MainId", v.MainId);
                 //open database connection
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();

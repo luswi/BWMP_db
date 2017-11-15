@@ -45,6 +45,7 @@
             this.labelSearch = new System.Windows.Forms.Label();
             this.textboxSearch = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textboxMainId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -142,6 +143,7 @@
             this.buttonUpdate.TabIndex = 8;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
@@ -212,11 +214,20 @@
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
+            // textboxMainId
+            // 
+            this.textboxMainId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textboxMainId.Location = new System.Drawing.Point(168, 49);
+            this.textboxMainId.Name = "textboxMainId";
+            this.textboxMainId.Size = new System.Drawing.Size(173, 26);
+            this.textboxMainId.TabIndex = 15;
+            // 
             // BWMP_db
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 459);
+            this.Controls.Add(this.textboxMainId);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textboxSearch);
             this.Controls.Add(this.labelSearch);
@@ -262,6 +273,7 @@
         private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.TextBox textboxSearch;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textboxMainId;
     }
 }
 
