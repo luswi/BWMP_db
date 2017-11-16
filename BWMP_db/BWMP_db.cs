@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -95,7 +97,10 @@ namespace BWMP_db
             {
                 //updated successfully
                 MessageBox.Show("Data updated");
-
+                //Load data on data grid
+                DataTable dt = v.Select();
+                dataGridView1.DataSource = dt;
+                Clear();
             }
             else
             {
@@ -106,5 +111,44 @@ namespace BWMP_db
 
         }
 
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            //delete project
+            //Get MainId
+            v.MainId = Convert.ToInt32(textboxMainId.Text);
+            bool isSuccess = v.Delete(v);
+            if (isSuccess == true)
+            {
+                //deleted
+                MessageBox.Show("Data deleted");
+                //Refresh data
+                DataTable dt = v.Select();
+                dataGridView1.DataSource = dt;
+                Clear();
+
+            }
+            else
+            {
+                //Failed
+                MessageBox.Show("Something goes wrong");
+            }
+        }
+
+
+
+        //Search box
+        static string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
+        
+        private void textboxSearch_TextChanged(object sender, EventArgs e)
+        {
+            //get value from textbox
+            string keyword = textboxSearch.Text;
+
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselId LIKE '%"+keyword+"%' OR VesselName LIKE '%"+keyword+"%'", conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }

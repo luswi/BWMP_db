@@ -117,7 +117,7 @@ namespace BWMP_db.classes
             try
             {
                 //SQL to update our data
-                string sql = "UPDATE date SET VesselId=@VesselId, VesselName=@VesselName, VesselStatus=@VesselStatus WHERE MainId=@MainId";
+                string sql = "UPDATE data SET VesselId=@VesselId, VesselName=@VesselName, VesselStatus=@VesselStatus WHERE MainId=@MainId";
                 //Creating SQL command
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //create parameters to add data

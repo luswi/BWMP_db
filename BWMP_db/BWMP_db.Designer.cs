@@ -156,6 +156,7 @@
             this.buttonDelete.TabIndex = 10;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonClear
             // 
@@ -172,6 +173,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -203,6 +205,7 @@
             this.textboxSearch.Name = "textboxSearch";
             this.textboxSearch.Size = new System.Drawing.Size(354, 26);
             this.textboxSearch.TabIndex = 13;
+            this.textboxSearch.TextChanged += new System.EventHandler(this.textboxSearch_TextChanged);
             // 
             // pictureBox2
             // 
@@ -276,4 +279,3 @@
         private System.Windows.Forms.TextBox textboxMainId;
     }
 }
-
