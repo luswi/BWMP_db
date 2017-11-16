@@ -46,6 +46,7 @@
             this.textboxSearch = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textboxMainId = new System.Windows.Forms.TextBox();
+            this.bTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -227,11 +228,22 @@
             this.textboxMainId.TabIndex = 15;
             this.textboxMainId.Visible = false;
             // 
+            // bTest
+            // 
+            this.bTest.Location = new System.Drawing.Point(862, 401);
+            this.bTest.Name = "bTest";
+            this.bTest.Size = new System.Drawing.Size(75, 23);
+            this.bTest.TabIndex = 16;
+            this.bTest.Text = "test";
+            this.bTest.UseVisualStyleBackColor = true;
+            this.bTest.Click += new System.EventHandler(this.bTest_Click);
+            // 
             // BWMP_db
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 459);
+            this.Controls.Add(this.bTest);
             this.Controls.Add(this.textboxMainId);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textboxSearch);
@@ -279,5 +291,6 @@
         private System.Windows.Forms.TextBox textboxSearch;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textboxMainId;
+        private System.Windows.Forms.Button bTest;
     }
 }

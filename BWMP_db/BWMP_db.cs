@@ -150,5 +150,14 @@ namespace BWMP_db
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+
+        //some tests
+        private void bTest_Click(object sender, EventArgs e)
+        {
+            
+            modules.NewProjectForm pokaz = new modules.NewProjectForm();
+            pokaz.ShowDialog();
+        }
     }
 }
