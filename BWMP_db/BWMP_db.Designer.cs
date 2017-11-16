@@ -219,11 +219,13 @@
             // 
             // textboxMainId
             // 
+            this.textboxMainId.Enabled = false;
             this.textboxMainId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textboxMainId.Location = new System.Drawing.Point(168, 49);
             this.textboxMainId.Name = "textboxMainId";
             this.textboxMainId.Size = new System.Drawing.Size(173, 26);
             this.textboxMainId.TabIndex = 15;
+            this.textboxMainId.Visible = false;
             // 
             // BWMP_db
             // 
