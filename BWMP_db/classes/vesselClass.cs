@@ -6,88 +6,86 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BWMP_db.classes
 {
-    class vesselClass
+    //==============================================================//
+    // vesselClass is responsible for project module core functions //
+    //==============================================================//
+
+    class VesselClass
     {
-        //Data carrier
-        public int MainId
-        {
-            get;
-            set;
-        }
-        public string VesselId
-        {
-            get;
-            set;
-        }
-        public string VesselName
-        {
-            get;
-            set;
+        // Data carriers.
+        public int MainId { get; set; }
+        public string VesselId { get; set; }
+        public string VesselName { get; set; }
+        public string VesselStatus { get; set; }
+        public string VesselLCS { get; set; }
+        public string VesselMethodSeq { get; set; }
+        public string VesselMethodFlow { get; set; }
+        public string SfaCreated { get; set; }
+        public string NOrder { get; set; }
+        public string SfaSent { get; set; }
+        public string SfaRec { get; set; }
 
-        }
-        public string VesselStatus
-        {
-            get;
-            set;
-
-        }
+        // Connection string to SQL Local database.
         static string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
 
+        //====================================//
+        // Selecting data from Local database //
+        //====================================//
 
-        //Selecting data from database
         public DataTable Select()
         {
-            //1. database connection
+            // Database connection
             SqlConnection conn = new SqlConnection(myconnstrng);
             DataTable dt = new DataTable();
             try
             {
-                //2. Wrtiting SQL Query
+                // SQL Query.
                 string sql = "SELECT * FROM data";
-                // creating cmd using sql and conn
+                // Creating cmd (combine sql and conn).
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                // creating sql DataAdapter using cmd
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                // Creating sql DataAdapter using cmd.
+                SqlDataAdapter sqlAdapter = new SqlDataAdapter(cmd);
+                // Open connection.
                 conn.Open();
-                adapter.Fill(dt);
-                
+                sqlAdapter.Fill(dt);
             }
-            catch(Exception ex)
-            {
-
-            }
+            catch(Exception ex) { }
             finally
             {
                 conn.Close();
             }
             return dt;
         }
-        // Insering data into database
-        public bool Insert(vesselClass v)
+
+        //=============================//
+        // Insering data into database //
+        //=============================//
+
+        public bool Insert(VesselClass v)
         {
-            // creating a default return type and setting its value to false
+            // Creating a default return type and setting value to false.
             bool isSuccess = false;
 
-            //1. database connection
+            // Database connection.
             SqlConnection conn = new SqlConnection(myconnstrng);
             try
             {
-                //2 create sql query to insert SQL data
+                // SQL Query.
                 string sql = "INSERT INTO data(VesselId, VesselName, VesselStatus) VALUES (@VesselId, @VesselName, @VesselStatus)";
-                // creating cmd using sql and conn
+                // Creating cmd (combine sql and conn).
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                // creating parameters to add data
+                // Creating parameters to add data.
                 cmd.Parameters.AddWithValue("@VesselId", v.VesselId);
                 cmd.Parameters.AddWithValue("@VesselName", v.VesselName);
                 cmd.Parameters.AddWithValue("@VesselStatus", v.VesselStatus);
-
-                // open connection
+                // Open connection.
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
-                // if the query runs succesfully then the value of rows will be greater than zero, else value will be zero
+                // If the SQL query runs succesfully then the value of rows will be greater than zero, else value will be zero.
                 if(rows>0)
                 {
                     isSuccess = true;
@@ -97,38 +95,40 @@ namespace BWMP_db.classes
                     isSuccess = false;
                 }
             }
-            catch (Exception ex)
-            {
-
-            }
+            catch (Exception ex) { }
             finally
             {
                 conn.Close();
             }
             return isSuccess;
         }
-        // update method here
-        public bool Update(vesselClass v)
+
+        //====================//
+        // Update/edit method //
+        //====================//
+
+        public bool Update(VesselClass v)
         {
-            // create default return type and sets its default values to false
+            // Creating a default return type and setting value to false.
             bool isSuccess = false;
 
+            // Database connection.
             SqlConnection conn = new SqlConnection(myconnstrng);
             try
             {
-                //SQL to update our data
+                // SQL Query.
                 string sql = "UPDATE data SET VesselId=@VesselId, VesselName=@VesselName, VesselStatus=@VesselStatus WHERE MainId=@MainId";
-                //Creating SQL command
+                // Creating SQL command.
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                //create parameters to add data
+                // Create parameters to add data.
                 cmd.Parameters.AddWithValue("@VesselId", v.VesselId);
                 cmd.Parameters.AddWithValue("@VesselName", v.VesselName);
                 cmd.Parameters.AddWithValue("@VesselStatus", v.VesselStatus);
                 cmd.Parameters.AddWithValue("@MainId", v.MainId);
-                //open database connection
+                // Open database connection.
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
-                //if the query runs sucesfully then value of rows will be greater than zero, alse value will be zero.
+                // If the query runs sucesfully then value of rows will be greater than zero, alse value will be zero.
                 if (rows>0)
                 {
                     isSuccess = true;
@@ -139,33 +139,34 @@ namespace BWMP_db.classes
                 }
             
             }
-            catch (Exception ex)
-            {
-
-            }
+            catch (Exception ex) { }
             finally
             {
                 conn.Close();
             }
             return isSuccess;
         }
-        // delete from our databaseee
-        public bool Delete(vesselClass v)
+
+        //===============================//
+        // Delete data from our database //
+        //===============================//
+
+        public bool Delete(VesselClass v)
         {
-            //Create default return value and set it to false
+            // Create default return value and set it to false.
             bool isSuccess = false;
 
-            //create sql connection
+            // Create sql connection.
             SqlConnection conn = new SqlConnection(myconnstrng);
             try
             {
-                //SQL to dalete data
+                // SQL to dalete data.
                 string sql = "DELETE FROM data WHERE MainId=@MainId";
-                //Create SQL Command
+                // Create SQL command.
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                //create parameters to delete
+                // Create parameters to delete.
                 cmd.Parameters.AddWithValue("@MainId", v.MainId);
-                //open database connection
+                // Open database connection
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
                 if(rows>0)
@@ -177,10 +178,7 @@ namespace BWMP_db.classes
                     isSuccess = false;
                 }
             }
-            catch (Exception ex)
-            {
-
-            }
+            catch (Exception ex) { }
             finally
             {
                 conn.Close();
@@ -188,7 +186,6 @@ namespace BWMP_db.classes
 
             return isSuccess;
         }
-
-
+        
     }
 }

@@ -44,12 +44,16 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelSearch = new System.Windows.Forms.Label();
             this.textboxSearch = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textboxMainId = new System.Windows.Forms.TextBox();
             this.bTest = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonNPS = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -208,16 +212,6 @@
             this.textboxSearch.TabIndex = 13;
             this.textboxSearch.TextChanged += new System.EventHandler(this.textboxSearch_TextChanged);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(953, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 38);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
             // textboxMainId
             // 
             this.textboxMainId.Enabled = false;
@@ -238,14 +232,61 @@
             this.bTest.UseVisualStyleBackColor = true;
             this.bTest.Click += new System.EventHandler(this.bTest_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1004, 24);
+            this.menuStrip1.TabIndex = 17;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // buttonNPS
+            // 
+            this.buttonNPS.Location = new System.Drawing.Point(696, 401);
+            this.buttonNPS.Name = "buttonNPS";
+            this.buttonNPS.Size = new System.Drawing.Size(75, 23);
+            this.buttonNPS.TabIndex = 18;
+            this.buttonNPS.Text = "NPS";
+            this.buttonNPS.UseVisualStyleBackColor = true;
+            this.buttonNPS.Click += new System.EventHandler(this.buttonNPS_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(526, 378);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 19;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // BWMP_db
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 459);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.buttonNPS);
             this.Controls.Add(this.bTest);
             this.Controls.Add(this.textboxMainId);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textboxSearch);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.dataGridView1);
@@ -260,13 +301,18 @@
             this.Controls.Add(this.textboxVesselId);
             this.Controls.Add(this.labelVesselId);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "BWMP_db";
             this.Text = "BWMP_db";
             this.Load += new System.EventHandler(this.BWMP_db_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,8 +335,12 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.TextBox textboxSearch;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textboxMainId;
         private System.Windows.Forms.Button bTest;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.Button buttonNPS;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

@@ -16,5 +16,10 @@ namespace BWMP_db.modules
         {
             InitializeComponent();
         }
+
+        private void NewProjectForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

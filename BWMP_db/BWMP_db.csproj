@@ -97,6 +97,9 @@
     <EmbeddedResource Include="BWMP_db.resx">
       <DependentUpon>BWMP_db.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="modules\NewProjectForm.resx">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
