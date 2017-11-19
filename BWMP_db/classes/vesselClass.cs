@@ -76,6 +76,7 @@ namespace BWMP_db.classes
             try
             {
                 // SQL Query.
+                //string sql = "INSERT INTO data(VesselId, VesselName, VesselStatus, VesselLcs, VesselMethodSeq, VesselMethodFt, VesselMethodDil, SfaCreated, SfaSent, NOrder, SfaRec) VALUES (@VesselId, @VesselName, @VesselStatus, @VesselLcs, @VesselMethodSeq, @VesselMethodFt, @VesselMethodDil, @SfaCreated, @SfaSent, @NOrder, @SfaRec)";
                 string sql = "INSERT INTO data(VesselId, VesselName, VesselStatus) VALUES (@VesselId, @VesselName, @VesselStatus)";
                 // Creating cmd (combine sql and conn).
                 SqlCommand cmd = new SqlCommand(sql, conn);
@@ -83,6 +84,14 @@ namespace BWMP_db.classes
                 cmd.Parameters.AddWithValue("@VesselId", v.VesselId);
                 cmd.Parameters.AddWithValue("@VesselName", v.VesselName);
                 cmd.Parameters.AddWithValue("@VesselStatus", v.VesselStatus);
+                //cmd.Parameters.AddWithValue("@VesselLcs", v.VesselLcs);
+                //cmd.Parameters.AddWithValue("@VesselMethodSeq", v.VesselMethodSeq);
+                //cmd.Parameters.AddWithValue("@VesselMethodFt", v.VesselMethodFt);
+                //cmd.Parameters.AddWithValue("@VesselMethodDil", v.VesselMethodDil);
+                //cmd.Parameters.AddWithValue("@SfaCreated", v.SfaCreated);
+                //cmd.Parameters.AddWithValue("@SfaSent", v.SfaSent);
+                //cmd.Parameters.AddWithValue("@NOrder", v.NOrder);
+                //cmd.Parameters.AddWithValue("@SfaRec", v.SfaRec);
                 // Open connection.
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();

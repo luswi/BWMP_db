@@ -49,12 +49,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bWMPdbInformacjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonNPS = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.bWMPdbInformacjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonNew = new System.Windows.Forms.Button();
+            this.buttonEditShow = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -258,6 +262,13 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // bWMPdbInformacjeToolStripMenuItem
+            // 
+            this.bWMPdbInformacjeToolStripMenuItem.Name = "bWMPdbInformacjeToolStripMenuItem";
+            this.bWMPdbInformacjeToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.bWMPdbInformacjeToolStripMenuItem.Text = "BWMP_db - Info";
+            this.bWMPdbInformacjeToolStripMenuItem.Click += new System.EventHandler(this.bWMPdbInfoToolStripMenuItem_Click);
+            // 
             // buttonNPS
             // 
             this.buttonNPS.Location = new System.Drawing.Point(696, 401);
@@ -281,18 +292,44 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // bWMPdbInformacjeToolStripMenuItem
+            // buttonNew
             // 
-            this.bWMPdbInformacjeToolStripMenuItem.Name = "bWMPdbInformacjeToolStripMenuItem";
-            this.bWMPdbInformacjeToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.bWMPdbInformacjeToolStripMenuItem.Text = "BWMP_db - Info";
-            this.bWMPdbInformacjeToolStripMenuItem.Click += new System.EventHandler(this.bWMPdbInfoToolStripMenuItem_Click);
+            this.buttonNew.Location = new System.Drawing.Point(552, 400);
+            this.buttonNew.Name = "buttonNew";
+            this.buttonNew.Size = new System.Drawing.Size(75, 23);
+            this.buttonNew.TabIndex = 20;
+            this.buttonNew.Text = "New Project";
+            this.buttonNew.UseVisualStyleBackColor = true;
+            this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
+            // 
+            // buttonEditShow
+            // 
+            this.buttonEditShow.Location = new System.Drawing.Point(898, 323);
+            this.buttonEditShow.Name = "buttonEditShow";
+            this.buttonEditShow.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditShow.TabIndex = 22;
+            this.buttonEditShow.Text = "Edit / Show";
+            this.buttonEditShow.UseVisualStyleBackColor = true;
+            this.buttonEditShow.Click += new System.EventHandler(this.buttonEditShow_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(147, 284);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
             // 
             // BWMP_db
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 459);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.buttonEditShow);
+            this.Controls.Add(this.buttonNew);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.buttonNPS);
             this.Controls.Add(this.bTest);
@@ -318,11 +355,13 @@
             this.MaximizeBox = false;
             this.Name = "BWMP_db";
             this.Text = "BWMP_db";
+            this.Activated += new System.EventHandler(this.BWMP_db_Activated);
             this.Load += new System.EventHandler(this.BWMP_db_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +392,8 @@
         private System.Windows.Forms.Button buttonNPS;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ToolStripMenuItem bWMPdbInformacjeToolStripMenuItem;
+        private System.Windows.Forms.Button buttonNew;
+        private System.Windows.Forms.Button buttonEditShow;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

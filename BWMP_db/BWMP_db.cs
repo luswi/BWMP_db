@@ -42,7 +42,7 @@ namespace BWMP_db
                 if (success == true)
                 {
                     // Succesfully inserted.
-                    MessageBox.Show("New BWMP succesfully inserted", "OK",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("New BWMP succesfully inserted", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Clear method.
                     Clear();
@@ -59,10 +59,10 @@ namespace BWMP_db
             }
             else
             {
-                
+
                 MessageBox.Show("Please provide ID and Vesssel name");
             }
-            
+
         }
 
         //===============================//
@@ -76,18 +76,24 @@ namespace BWMP_db
             dataGridView1.DataSource = dt;
             // Hide column from data grid view.
             dataGridView1.Columns["MainId"].Visible = false;
-            
-
+            dataGridView1.Columns["VesselLcs"].Visible = false;
+            dataGridView1.Columns["VesselMethodSeq"].Visible = false;
+            dataGridView1.Columns["VesselMethodFt"].Visible = false;
+            dataGridView1.Columns["VesselMethodDil"].Visible = false;
+            dataGridView1.Columns["SfaCreated"].Visible = false;
+            dataGridView1.Columns["SfaSent"].Visible = false;
+            dataGridView1.Columns["NOrder"].Visible = false;
+            dataGridView1.Columns["SfaRec"].Visible = false;
 
             // Select checkbox and load data only with selected option.
-            string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
-            SqlConnection conn = new SqlConnection(myconnstrng);
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open'", conn);
-            DataTable checkbox = new DataTable();
-            adapter.Fill(checkbox);
-            dataGridView1.DataSource = checkbox;
+            //string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
+            //SqlConnection conn = new SqlConnection(myconnstrng);
+            //SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open'", conn);
+            //DataTable checkbox = new DataTable();
+            //adapter.Fill(checkbox);
+            //dataGridView1.DataSource = checkbox;
         }
-        
+
         //==============//
         // Clear method //
         //==============//
@@ -109,10 +115,10 @@ namespace BWMP_db
             int rowIndex = e.RowIndex;
             if (rowIndex >= 0)
             {
-            textboxMainId.Text = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
-            textboxVesselId.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
-            textboxVesselName.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
-            comboboxVesselStatus.Text = dataGridView1.Rows[rowIndex].Cells[3].Value.ToString();
+                textboxMainId.Text = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
+                textboxVesselId.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
+                textboxVesselName.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
+                comboboxVesselStatus.Text = dataGridView1.Rows[rowIndex].Cells[3].Value.ToString();
             }
             else
             {
@@ -120,7 +126,7 @@ namespace BWMP_db
             }
 
         }
-        
+
         //==============//
         // Clear button //
         //==============//
@@ -226,7 +232,7 @@ namespace BWMP_db
         // checkbox test
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked)
+            if (checkBox1.Checked)
             {
                 //get value from textbox
                 //string keyword = textboxSearch.Text;
@@ -247,7 +253,44 @@ namespace BWMP_db
 
         private void bWMPdbInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Version 1.3 Stable","Informations",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Version 1.3 Stable", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
+
+        private void BWMP_db_Activated(object sender, EventArgs e)
+        {
+            string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open'", conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void buttonNew_Click(object sender, EventArgs e)
+        {
+            modules.NewProjectForm newProject = new modules.NewProjectForm();
+            newProject.ShowDialog();
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            modules.EditProjectForm editProject = new modules.EditProjectForm();
+            editProject.textboxVesselId.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            editProject.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonEditShow_Click(object sender, EventArgs e)
+        {
+            modules.EditProjectForm editProject = new modules.EditProjectForm();
+            editProject.textboxVesselId.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            editProject.ShowDialog();
         }
     }
 }

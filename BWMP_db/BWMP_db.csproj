@@ -86,6 +86,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>databaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="modules\EditProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\EditProjectForm.Designer.cs">
+      <DependentUpon>EditProjectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="modules\NewProjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BWMP_db.resx">
       <DependentUpon>BWMP_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modules\EditProjectForm.resx">
+      <DependentUpon>EditProjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modules\NewProjectForm.resx">
       <DependentUpon>NewProjectForm.cs</DependentUpon>

@@ -33,7 +33,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboboxNOrder = new System.Windows.Forms.ComboBox();
-            this.comboSfaRec = new System.Windows.Forms.ComboBox();
+            this.comboboxSfaRec = new System.Windows.Forms.ComboBox();
             this.comboboxSfaSent = new System.Windows.Forms.ComboBox();
             this.comboboxSfaCreated = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -58,14 +58,16 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.newProject = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.comboboxStatus = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -99,7 +101,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.comboboxNOrder);
-            this.groupBox3.Controls.Add(this.comboSfaRec);
+            this.groupBox3.Controls.Add(this.comboboxSfaRec);
             this.groupBox3.Controls.Add(this.comboboxSfaSent);
             this.groupBox3.Controls.Add(this.comboboxSfaCreated);
             this.groupBox3.Controls.Add(this.label10);
@@ -125,18 +127,18 @@
             this.comboboxNOrder.Size = new System.Drawing.Size(223, 28);
             this.comboboxNOrder.TabIndex = 16;
             // 
-            // comboSfaRec
+            // comboboxSfaRec
             // 
-            this.comboSfaRec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboSfaRec.FormattingEnabled = true;
-            this.comboSfaRec.Items.AddRange(new object[] {
+            this.comboboxSfaRec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxSfaRec.FormattingEnabled = true;
+            this.comboboxSfaRec.Items.AddRange(new object[] {
             "Yes",
             "No",
             "Special Case"});
-            this.comboSfaRec.Location = new System.Drawing.Point(136, 127);
-            this.comboSfaRec.Name = "comboSfaRec";
-            this.comboSfaRec.Size = new System.Drawing.Size(223, 28);
-            this.comboSfaRec.TabIndex = 15;
+            this.comboboxSfaRec.Location = new System.Drawing.Point(136, 127);
+            this.comboboxSfaRec.Name = "comboboxSfaRec";
+            this.comboboxSfaRec.Size = new System.Drawing.Size(223, 28);
+            this.comboboxSfaRec.TabIndex = 15;
             // 
             // comboboxSfaSent
             // 
@@ -378,6 +380,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.comboboxStatus);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(868, 566);
@@ -385,14 +388,15 @@
             this.tabPage4.Text = "Status";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // newProject
             // 
-            this.button1.Location = new System.Drawing.Point(728, 628);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.newProject.Location = new System.Drawing.Point(728, 628);
+            this.newProject.Name = "newProject";
+            this.newProject.Size = new System.Drawing.Size(75, 23);
+            this.newProject.TabIndex = 1;
+            this.newProject.Text = "OK";
+            this.newProject.UseVisualStyleBackColor = true;
+            this.newProject.Click += new System.EventHandler(this.newProject_Click);
             // 
             // button2
             // 
@@ -403,19 +407,29 @@
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // comboboxStatus
+            // 
+            this.comboboxStatus.FormattingEnabled = true;
+            this.comboboxStatus.Items.AddRange(new object[] {
+            "Open",
+            "Close"});
+            this.comboboxStatus.Location = new System.Drawing.Point(197, 96);
+            this.comboboxStatus.Name = "comboboxStatus";
+            this.comboboxStatus.Size = new System.Drawing.Size(304, 28);
+            this.comboboxStatus.TabIndex = 0;
+            // 
             // NewProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 663);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.newProject);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "NewProjectForm";
             this.Text = "New BWMP";
-            this.Load += new System.EventHandler(this.NewProjectForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -425,6 +439,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -454,13 +469,14 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboboxNOrder;
-        private System.Windows.Forms.ComboBox comboSfaRec;
+        private System.Windows.Forms.ComboBox comboboxSfaRec;
         private System.Windows.Forms.ComboBox comboboxSfaSent;
         private System.Windows.Forms.ComboBox comboboxSfaCreated;
         private System.Windows.Forms.ComboBox comboboxVesselMethodDil;
         private System.Windows.Forms.ComboBox comboboxVesselMethodFt;
         private System.Windows.Forms.ComboBox comboboxVesselMethodSeq;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button newProject;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboboxStatus;
     }
 }
