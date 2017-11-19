@@ -158,9 +158,18 @@ namespace BWMP_db
                 // If successfully deleted.
                 MessageBox.Show("Data deleted");
                 // Refresh data.
-                DataTable dt = v.Select();
+              
+                //DataTable dt = v.Select();
+                //dataGridView1.DataSource = dt;
+                //Clear();
+
+                string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
+                SqlConnection conn = new SqlConnection(myconnstrng);
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open' OR VesselStatus Like 'OnHold'", conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
-                Clear();
+
 
             }
             else

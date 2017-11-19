@@ -52,56 +52,54 @@
             this.buttonNew = new System.Windows.Forms.Button();
             this.buttonEditShow = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pbStatus = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.labelVesselIdData = new System.Windows.Forms.Label();
-            this.labelVesselNameData = new System.Windows.Forms.Label();
-            this.labelVesselLcs = new System.Windows.Forms.Label();
-            this.labelVesselMethodSeq = new System.Windows.Forms.Label();
-            this.labelVesselMethodFt = new System.Windows.Forms.Label();
-            this.labelVesselMethodDil = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.labelSfaCreated = new System.Windows.Forms.Label();
             this.labelSfaSent = new System.Windows.Forms.Label();
             this.labelNOrder = new System.Windows.Forms.Label();
             this.labelSfaRec = new System.Windows.Forms.Label();
+            this.labelSfaRecData = new System.Windows.Forms.Label();
+            this.labelSfaCreatedData = new System.Windows.Forms.Label();
+            this.labelNOrderData = new System.Windows.Forms.Label();
+            this.labelSfaSentData = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.labelVesselLcs = new System.Windows.Forms.Label();
+            this.labelVesselMethodSeq = new System.Windows.Forms.Label();
+            this.labelVesselMethodFt = new System.Windows.Forms.Label();
+            this.pbLcsStatus = new System.Windows.Forms.PictureBox();
+            this.labelVesselMethodDil = new System.Windows.Forms.Label();
             this.labelVesselLcsData = new System.Windows.Forms.Label();
             this.labelVesselMethodSeqData = new System.Windows.Forms.Label();
             this.labelVesselMethodFtData = new System.Windows.Forms.Label();
             this.labelVesselMethodDilData = new System.Windows.Forms.Label();
-            this.labelSfaCreatedData = new System.Windows.Forms.Label();
-            this.labelSfaSentData = new System.Windows.Forms.Label();
-            this.labelNOrderData = new System.Windows.Forms.Label();
-            this.labelSfaRecData = new System.Windows.Forms.Label();
-            this.pbLcsStatus = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.labelVesselIdData = new System.Windows.Forms.Label();
+            this.labelVesselNameData = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLcsStatus)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(978, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(959, 49);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(194, 186);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +120,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelName.Location = new System.Drawing.Point(6, 50);
+            this.labelName.Location = new System.Drawing.Point(6, 36);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(103, 20);
             this.labelName.TabIndex = 3;
@@ -155,7 +153,7 @@
             this.buttonAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(581, 539);
+            this.buttonAdd.Location = new System.Drawing.Point(959, 288);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(99, 46);
             this.buttonAdd.TabIndex = 7;
@@ -168,7 +166,7 @@
             this.buttonUpdate.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(686, 539);
+            this.buttonUpdate.Location = new System.Drawing.Point(1073, 288);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(99, 46);
             this.buttonUpdate.TabIndex = 8;
@@ -181,7 +179,7 @@
             this.buttonDelete.BackColor = System.Drawing.Color.Crimson;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonDelete.Location = new System.Drawing.Point(805, 539);
+            this.buttonDelete.Location = new System.Drawing.Point(955, 350);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(99, 46);
             this.buttonDelete.TabIndex = 10;
@@ -194,7 +192,7 @@
             this.buttonClear.BackColor = System.Drawing.Color.Gold;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonClear.ForeColor = System.Drawing.Color.White;
-            this.buttonClear.Location = new System.Drawing.Point(936, 539);
+            this.buttonClear.Location = new System.Drawing.Point(1060, 357);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(99, 46);
             this.buttonClear.TabIndex = 9;
@@ -242,7 +240,7 @@
             // 
             this.textboxMainId.Enabled = false;
             this.textboxMainId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textboxMainId.Location = new System.Drawing.Point(978, 261);
+            this.textboxMainId.Location = new System.Drawing.Point(959, 241);
             this.textboxMainId.Name = "textboxMainId";
             this.textboxMainId.Size = new System.Drawing.Size(173, 26);
             this.textboxMainId.TabIndex = 15;
@@ -282,7 +280,7 @@
             // 
             // buttonNPS
             // 
-            this.buttonNPS.Location = new System.Drawing.Point(853, 611);
+            this.buttonNPS.Location = new System.Drawing.Point(1029, 565);
             this.buttonNPS.Name = "buttonNPS";
             this.buttonNPS.Size = new System.Drawing.Size(75, 23);
             this.buttonNPS.TabIndex = 18;
@@ -326,21 +324,12 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1029, 418);
+            this.pictureBox2.Location = new System.Drawing.Point(435, 417);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(64, 64);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
-            // 
-            // pbStatus
-            // 
-            this.pbStatus.Location = new System.Drawing.Point(1064, 535);
-            this.pbStatus.Name = "pbStatus";
-            this.pbStatus.Size = new System.Drawing.Size(50, 50);
-            this.pbStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbStatus.TabIndex = 25;
-            this.pbStatus.TabStop = false;
             // 
             // groupBox1
             // 
@@ -373,7 +362,7 @@
             this.tabControl1.Location = new System.Drawing.Point(440, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(513, 493);
+            this.tabControl1.Size = new System.Drawing.Size(513, 513);
             this.tabControl1.TabIndex = 28;
             // 
             // tabPage1
@@ -381,103 +370,31 @@
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.groupBox3);
+            this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(505, 467);
+            this.tabPage1.Size = new System.Drawing.Size(505, 487);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main Informations ->";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // groupBox5
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(505, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Approval Process ->";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(505, 74);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Invoicing ->";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.labelStatus);
-            this.tabPage4.Controls.Add(this.comboboxVesselStatus);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(505, 467);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Status";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // labelVesselIdData
-            // 
-            this.labelVesselIdData.AutoSize = true;
-            this.labelVesselIdData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelVesselIdData.Location = new System.Drawing.Point(115, 30);
-            this.labelVesselIdData.Name = "labelVesselIdData";
-            this.labelVesselIdData.Size = new System.Drawing.Size(46, 20);
-            this.labelVesselIdData.TabIndex = 7;
-            this.labelVesselIdData.Text = "show";
-            // 
-            // labelVesselNameData
-            // 
-            this.labelVesselNameData.AutoSize = true;
-            this.labelVesselNameData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelVesselNameData.Location = new System.Drawing.Point(115, 50);
-            this.labelVesselNameData.Name = "labelVesselNameData";
-            this.labelVesselNameData.Size = new System.Drawing.Size(46, 20);
-            this.labelVesselNameData.TabIndex = 8;
-            this.labelVesselNameData.Text = "show";
-            // 
-            // labelVesselLcs
-            // 
-            this.labelVesselLcs.AutoSize = true;
-            this.labelVesselLcs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelVesselLcs.Location = new System.Drawing.Point(21, 29);
-            this.labelVesselLcs.Name = "labelVesselLcs";
-            this.labelVesselLcs.Size = new System.Drawing.Size(140, 20);
-            this.labelVesselLcs.TabIndex = 9;
-            this.labelVesselLcs.Text = "Loading Computer";
-            // 
-            // labelVesselMethodSeq
-            // 
-            this.labelVesselMethodSeq.AutoSize = true;
-            this.labelVesselMethodSeq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelVesselMethodSeq.Location = new System.Drawing.Point(21, 49);
-            this.labelVesselMethodSeq.Name = "labelVesselMethodSeq";
-            this.labelVesselMethodSeq.Size = new System.Drawing.Size(85, 20);
-            this.labelVesselMethodSeq.TabIndex = 10;
-            this.labelVesselMethodSeq.Text = "Sequential";
-            // 
-            // labelVesselMethodFt
-            // 
-            this.labelVesselMethodFt.AutoSize = true;
-            this.labelVesselMethodFt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelVesselMethodFt.Location = new System.Drawing.Point(21, 69);
-            this.labelVesselMethodFt.Name = "labelVesselMethodFt";
-            this.labelVesselMethodFt.Size = new System.Drawing.Size(97, 20);
-            this.labelVesselMethodFt.TabIndex = 11;
-            this.labelVesselMethodFt.Text = "Flow-Trough";
-            // 
-            // labelVesselMethodDil
-            // 
-            this.labelVesselMethodDil.AutoSize = true;
-            this.labelVesselMethodDil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelVesselMethodDil.Location = new System.Drawing.Point(21, 89);
-            this.labelVesselMethodDil.Name = "labelVesselMethodDil";
-            this.labelVesselMethodDil.Size = new System.Drawing.Size(62, 20);
-            this.labelVesselMethodDil.TabIndex = 12;
-            this.labelVesselMethodDil.Text = "Dilution";
+            this.groupBox5.Controls.Add(this.labelSfaCreated);
+            this.groupBox5.Controls.Add(this.labelSfaSent);
+            this.groupBox5.Controls.Add(this.labelNOrder);
+            this.groupBox5.Controls.Add(this.labelSfaRec);
+            this.groupBox5.Controls.Add(this.labelSfaRecData);
+            this.groupBox5.Controls.Add(this.labelSfaCreatedData);
+            this.groupBox5.Controls.Add(this.labelNOrderData);
+            this.groupBox5.Controls.Add(this.labelSfaSentData);
+            this.groupBox5.Location = new System.Drawing.Point(6, 253);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(493, 158);
+            this.groupBox5.TabIndex = 32;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "SFA / NOrder";
             // 
             // labelSfaCreated
             // 
@@ -519,45 +436,15 @@
             this.labelSfaRec.TabIndex = 16;
             this.labelSfaRec.Text = "SFA received";
             // 
-            // labelVesselLcsData
+            // labelSfaRecData
             // 
-            this.labelVesselLcsData.AutoSize = true;
-            this.labelVesselLcsData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelVesselLcsData.Location = new System.Drawing.Point(167, 29);
-            this.labelVesselLcsData.Name = "labelVesselLcsData";
-            this.labelVesselLcsData.Size = new System.Drawing.Size(46, 20);
-            this.labelVesselLcsData.TabIndex = 17;
-            this.labelVesselLcsData.Text = "show";
-            // 
-            // labelVesselMethodSeqData
-            // 
-            this.labelVesselMethodSeqData.AutoSize = true;
-            this.labelVesselMethodSeqData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelVesselMethodSeqData.Location = new System.Drawing.Point(167, 49);
-            this.labelVesselMethodSeqData.Name = "labelVesselMethodSeqData";
-            this.labelVesselMethodSeqData.Size = new System.Drawing.Size(46, 20);
-            this.labelVesselMethodSeqData.TabIndex = 18;
-            this.labelVesselMethodSeqData.Text = "show";
-            // 
-            // labelVesselMethodFtData
-            // 
-            this.labelVesselMethodFtData.AutoSize = true;
-            this.labelVesselMethodFtData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelVesselMethodFtData.Location = new System.Drawing.Point(167, 69);
-            this.labelVesselMethodFtData.Name = "labelVesselMethodFtData";
-            this.labelVesselMethodFtData.Size = new System.Drawing.Size(46, 20);
-            this.labelVesselMethodFtData.TabIndex = 19;
-            this.labelVesselMethodFtData.Text = "show";
-            // 
-            // labelVesselMethodDilData
-            // 
-            this.labelVesselMethodDilData.AutoSize = true;
-            this.labelVesselMethodDilData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelVesselMethodDilData.Location = new System.Drawing.Point(167, 89);
-            this.labelVesselMethodDilData.Name = "labelVesselMethodDilData";
-            this.labelVesselMethodDilData.Size = new System.Drawing.Size(46, 20);
-            this.labelVesselMethodDilData.TabIndex = 20;
-            this.labelVesselMethodDilData.Text = "show";
+            this.labelSfaRecData.AutoSize = true;
+            this.labelSfaRecData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelSfaRecData.Location = new System.Drawing.Point(155, 108);
+            this.labelSfaRecData.Name = "labelSfaRecData";
+            this.labelSfaRecData.Size = new System.Drawing.Size(46, 20);
+            this.labelSfaRecData.TabIndex = 24;
+            this.labelSfaRecData.Text = "show";
             // 
             // labelSfaCreatedData
             // 
@@ -569,16 +456,6 @@
             this.labelSfaCreatedData.TabIndex = 21;
             this.labelSfaCreatedData.Text = "show";
             // 
-            // labelSfaSentData
-            // 
-            this.labelSfaSentData.AutoSize = true;
-            this.labelSfaSentData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSfaSentData.Location = new System.Drawing.Point(155, 68);
-            this.labelSfaSentData.Name = "labelSfaSentData";
-            this.labelSfaSentData.Size = new System.Drawing.Size(46, 20);
-            this.labelSfaSentData.TabIndex = 22;
-            this.labelSfaSentData.Text = "show";
-            // 
             // labelNOrderData
             // 
             this.labelNOrderData.AutoSize = true;
@@ -589,37 +466,15 @@
             this.labelNOrderData.TabIndex = 23;
             this.labelNOrderData.Text = "show";
             // 
-            // labelSfaRecData
+            // labelSfaSentData
             // 
-            this.labelSfaRecData.AutoSize = true;
-            this.labelSfaRecData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSfaRecData.Location = new System.Drawing.Point(155, 108);
-            this.labelSfaRecData.Name = "labelSfaRecData";
-            this.labelSfaRecData.Size = new System.Drawing.Size(46, 20);
-            this.labelSfaRecData.TabIndex = 24;
-            this.labelSfaRecData.Text = "show";
-            // 
-            // pbLcsStatus
-            // 
-            this.pbLcsStatus.Location = new System.Drawing.Point(236, 19);
-            this.pbLcsStatus.Name = "pbLcsStatus";
-            this.pbLcsStatus.Size = new System.Drawing.Size(50, 50);
-            this.pbLcsStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLcsStatus.TabIndex = 29;
-            this.pbLcsStatus.TabStop = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.labelVesselId);
-            this.groupBox3.Controls.Add(this.labelName);
-            this.groupBox3.Controls.Add(this.labelVesselIdData);
-            this.groupBox3.Controls.Add(this.labelVesselNameData);
-            this.groupBox3.Location = new System.Drawing.Point(6, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(493, 100);
-            this.groupBox3.TabIndex = 30;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Core Informations";
+            this.labelSfaSentData.AutoSize = true;
+            this.labelSfaSentData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelSfaSentData.Location = new System.Drawing.Point(155, 68);
+            this.labelSfaSentData.Name = "labelSfaSentData";
+            this.labelSfaSentData.Size = new System.Drawing.Size(46, 20);
+            this.labelSfaSentData.TabIndex = 22;
+            this.labelSfaSentData.Text = "show";
             // 
             // groupBox4
             // 
@@ -639,22 +494,157 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "LCS / Methods";
             // 
-            // groupBox5
+            // labelVesselLcs
             // 
-            this.groupBox5.Controls.Add(this.labelSfaCreated);
-            this.groupBox5.Controls.Add(this.labelSfaSent);
-            this.groupBox5.Controls.Add(this.labelNOrder);
-            this.groupBox5.Controls.Add(this.labelSfaRec);
-            this.groupBox5.Controls.Add(this.labelSfaRecData);
-            this.groupBox5.Controls.Add(this.labelSfaCreatedData);
-            this.groupBox5.Controls.Add(this.labelNOrderData);
-            this.groupBox5.Controls.Add(this.labelSfaSentData);
-            this.groupBox5.Location = new System.Drawing.Point(6, 253);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(493, 159);
-            this.groupBox5.TabIndex = 32;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "SFA / NOrder";
+            this.labelVesselLcs.AutoSize = true;
+            this.labelVesselLcs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelVesselLcs.Location = new System.Drawing.Point(6, 16);
+            this.labelVesselLcs.Name = "labelVesselLcs";
+            this.labelVesselLcs.Size = new System.Drawing.Size(140, 20);
+            this.labelVesselLcs.TabIndex = 9;
+            this.labelVesselLcs.Text = "Loading Computer";
+            // 
+            // labelVesselMethodSeq
+            // 
+            this.labelVesselMethodSeq.AutoSize = true;
+            this.labelVesselMethodSeq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelVesselMethodSeq.Location = new System.Drawing.Point(6, 36);
+            this.labelVesselMethodSeq.Name = "labelVesselMethodSeq";
+            this.labelVesselMethodSeq.Size = new System.Drawing.Size(85, 20);
+            this.labelVesselMethodSeq.TabIndex = 10;
+            this.labelVesselMethodSeq.Text = "Sequential";
+            // 
+            // labelVesselMethodFt
+            // 
+            this.labelVesselMethodFt.AutoSize = true;
+            this.labelVesselMethodFt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelVesselMethodFt.Location = new System.Drawing.Point(5, 56);
+            this.labelVesselMethodFt.Name = "labelVesselMethodFt";
+            this.labelVesselMethodFt.Size = new System.Drawing.Size(97, 20);
+            this.labelVesselMethodFt.TabIndex = 11;
+            this.labelVesselMethodFt.Text = "Flow-Trough";
+            // 
+            // pbLcsStatus
+            // 
+            this.pbLcsStatus.Location = new System.Drawing.Point(210, 16);
+            this.pbLcsStatus.Name = "pbLcsStatus";
+            this.pbLcsStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbLcsStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLcsStatus.TabIndex = 29;
+            this.pbLcsStatus.TabStop = false;
+            // 
+            // labelVesselMethodDil
+            // 
+            this.labelVesselMethodDil.AutoSize = true;
+            this.labelVesselMethodDil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelVesselMethodDil.Location = new System.Drawing.Point(5, 76);
+            this.labelVesselMethodDil.Name = "labelVesselMethodDil";
+            this.labelVesselMethodDil.Size = new System.Drawing.Size(62, 20);
+            this.labelVesselMethodDil.TabIndex = 12;
+            this.labelVesselMethodDil.Text = "Dilution";
+            // 
+            // labelVesselLcsData
+            // 
+            this.labelVesselLcsData.AutoSize = true;
+            this.labelVesselLcsData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelVesselLcsData.Location = new System.Drawing.Point(158, 16);
+            this.labelVesselLcsData.Name = "labelVesselLcsData";
+            this.labelVesselLcsData.Size = new System.Drawing.Size(46, 20);
+            this.labelVesselLcsData.TabIndex = 17;
+            this.labelVesselLcsData.Text = "show";
+            // 
+            // labelVesselMethodSeqData
+            // 
+            this.labelVesselMethodSeqData.AutoSize = true;
+            this.labelVesselMethodSeqData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelVesselMethodSeqData.Location = new System.Drawing.Point(158, 36);
+            this.labelVesselMethodSeqData.Name = "labelVesselMethodSeqData";
+            this.labelVesselMethodSeqData.Size = new System.Drawing.Size(46, 20);
+            this.labelVesselMethodSeqData.TabIndex = 18;
+            this.labelVesselMethodSeqData.Text = "show";
+            // 
+            // labelVesselMethodFtData
+            // 
+            this.labelVesselMethodFtData.AutoSize = true;
+            this.labelVesselMethodFtData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelVesselMethodFtData.Location = new System.Drawing.Point(158, 56);
+            this.labelVesselMethodFtData.Name = "labelVesselMethodFtData";
+            this.labelVesselMethodFtData.Size = new System.Drawing.Size(46, 20);
+            this.labelVesselMethodFtData.TabIndex = 19;
+            this.labelVesselMethodFtData.Text = "show";
+            // 
+            // labelVesselMethodDilData
+            // 
+            this.labelVesselMethodDilData.AutoSize = true;
+            this.labelVesselMethodDilData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelVesselMethodDilData.Location = new System.Drawing.Point(158, 76);
+            this.labelVesselMethodDilData.Name = "labelVesselMethodDilData";
+            this.labelVesselMethodDilData.Size = new System.Drawing.Size(46, 20);
+            this.labelVesselMethodDilData.TabIndex = 20;
+            this.labelVesselMethodDilData.Text = "show";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.labelVesselId);
+            this.groupBox3.Controls.Add(this.labelName);
+            this.groupBox3.Controls.Add(this.labelVesselIdData);
+            this.groupBox3.Controls.Add(this.labelVesselNameData);
+            this.groupBox3.Location = new System.Drawing.Point(6, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(493, 100);
+            this.groupBox3.TabIndex = 30;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Core Informations";
+            // 
+            // labelVesselIdData
+            // 
+            this.labelVesselIdData.AutoSize = true;
+            this.labelVesselIdData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelVesselIdData.Location = new System.Drawing.Point(158, 16);
+            this.labelVesselIdData.Name = "labelVesselIdData";
+            this.labelVesselIdData.Size = new System.Drawing.Size(46, 20);
+            this.labelVesselIdData.TabIndex = 7;
+            this.labelVesselIdData.Text = "show";
+            // 
+            // labelVesselNameData
+            // 
+            this.labelVesselNameData.AutoSize = true;
+            this.labelVesselNameData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelVesselNameData.Location = new System.Drawing.Point(158, 36);
+            this.labelVesselNameData.Name = "labelVesselNameData";
+            this.labelVesselNameData.Size = new System.Drawing.Size(46, 20);
+            this.labelVesselNameData.TabIndex = 8;
+            this.labelVesselNameData.Text = "show";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(505, 467);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Approval Process ->";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(505, 467);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Invoicing ->";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.labelStatus);
+            this.tabPage4.Controls.Add(this.comboboxVesselStatus);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(505, 467);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Status";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // BWMP_db
             // 
@@ -664,8 +654,6 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pbStatus);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.buttonEditShow);
             this.Controls.Add(this.buttonNew);
             this.Controls.Add(this.buttonNPS);
@@ -689,21 +677,21 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.tabPage1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLcsStatus)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -734,7 +722,6 @@
         private System.Windows.Forms.Button buttonNew;
         private System.Windows.Forms.Button buttonEditShow;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pbStatus;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TabControl tabControl1;
