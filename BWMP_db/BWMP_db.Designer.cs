@@ -45,7 +45,6 @@
             this.labelSearch = new System.Windows.Forms.Label();
             this.textboxSearch = new System.Windows.Forms.TextBox();
             this.textboxMainId = new System.Windows.Forms.TextBox();
-            this.bTest = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,10 +54,12 @@
             this.buttonNew = new System.Windows.Forms.Button();
             this.buttonEditShow = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbStatus = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -227,16 +228,6 @@
             this.textboxMainId.TabIndex = 15;
             this.textboxMainId.Visible = false;
             // 
-            // bTest
-            // 
-            this.bTest.Location = new System.Drawing.Point(862, 401);
-            this.bTest.Name = "bTest";
-            this.bTest.Size = new System.Drawing.Size(75, 23);
-            this.bTest.TabIndex = 16;
-            this.bTest.Text = "test";
-            this.bTest.UseVisualStyleBackColor = true;
-            this.bTest.Click += new System.EventHandler(this.bTest_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -322,17 +313,26 @@
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             // 
+            // pbStatus
+            // 
+            this.pbStatus.Location = new System.Drawing.Point(241, 298);
+            this.pbStatus.Name = "pbStatus";
+            this.pbStatus.Size = new System.Drawing.Size(50, 50);
+            this.pbStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbStatus.TabIndex = 25;
+            this.pbStatus.TabStop = false;
+            // 
             // BWMP_db
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 459);
+            this.Controls.Add(this.pbStatus);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.buttonEditShow);
             this.Controls.Add(this.buttonNew);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.buttonNPS);
-            this.Controls.Add(this.bTest);
             this.Controls.Add(this.textboxMainId);
             this.Controls.Add(this.textboxSearch);
             this.Controls.Add(this.labelSearch);
@@ -362,6 +362,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,7 +386,6 @@
         private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.TextBox textboxSearch;
         private System.Windows.Forms.TextBox textboxMainId;
-        private System.Windows.Forms.Button bTest;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
@@ -395,5 +395,6 @@
         private System.Windows.Forms.Button buttonNew;
         private System.Windows.Forms.Button buttonEditShow;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbStatus;
     }
 }

@@ -111,7 +111,7 @@ namespace BWMP_db
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Get data from data grid and load it to the textboxes.
+            // Get data from data grid and load it to the textboxes.
             int rowIndex = e.RowIndex;
             if (rowIndex >= 0)
             {
@@ -119,6 +119,16 @@ namespace BWMP_db
                 textboxVesselId.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
                 textboxVesselName.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
                 comboboxVesselStatus.Text = dataGridView1.Rows[rowIndex].Cells[3].Value.ToString();
+                if(comboboxVesselStatus.Text == "Open")
+                {
+                    
+                    pbStatus.Image = Properties.Resources.yes;
+          
+                }
+                else
+                {
+                    pbStatus.Image = Properties.Resources.no;
+                }
             }
             else
             {
@@ -214,14 +224,11 @@ namespace BWMP_db
         }
 
 
-        //some tests
-        private void bTest_Click(object sender, EventArgs e)
-        {
 
-            modules.NewProjectForm pokaz = new modules.NewProjectForm();
-            pokaz.ShowDialog();
-        }
-        // tests again
+
+        //
+        // test for open app
+        //
         private void buttonNPS_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to open NPS?", "Start NPS", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -229,7 +236,9 @@ namespace BWMP_db
                 Process.Start("Notepad");
             }
         }
-        // checkbox test
+        //
+        // checkbox test for status 
+        //
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -251,12 +260,18 @@ namespace BWMP_db
             }
         }
 
+        //
+        // menu info 
+        //
+
         private void bWMPdbInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Version 1.3 Stable", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-
+        //
+        // When new add and close then refresh datagrid
+        //
 
         private void BWMP_db_Activated(object sender, EventArgs e)
         {
@@ -268,23 +283,24 @@ namespace BWMP_db
             dataGridView1.DataSource = dt;
         }
 
+        //
+        // Open New Form
+        //
+
+
         private void buttonNew_Click(object sender, EventArgs e)
         {
             modules.NewProjectForm newProject = new modules.NewProjectForm();
             newProject.ShowDialog();
         }
 
-        private void buttonEdit_Click(object sender, EventArgs e)
-        {
-            modules.EditProjectForm editProject = new modules.EditProjectForm();
-            editProject.textboxVesselId.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            editProject.ShowDialog();
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
 
-        }
+
+
+        //
+        // Open Edit Form
+        //
 
         private void buttonEditShow_Click(object sender, EventArgs e)
         {

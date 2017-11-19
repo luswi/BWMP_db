@@ -58,9 +58,9 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.comboboxStatus = new System.Windows.Forms.ComboBox();
             this.newProject = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboboxStatus = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -388,6 +388,17 @@
             this.tabPage4.Text = "Status";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // comboboxStatus
+            // 
+            this.comboboxStatus.FormattingEnabled = true;
+            this.comboboxStatus.Items.AddRange(new object[] {
+            "Open",
+            "Close"});
+            this.comboboxStatus.Location = new System.Drawing.Point(197, 96);
+            this.comboboxStatus.Name = "comboboxStatus";
+            this.comboboxStatus.Size = new System.Drawing.Size(304, 28);
+            this.comboboxStatus.TabIndex = 0;
+            // 
             // newProject
             // 
             this.newProject.Location = new System.Drawing.Point(728, 628);
@@ -407,17 +418,6 @@
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // comboboxStatus
-            // 
-            this.comboboxStatus.FormattingEnabled = true;
-            this.comboboxStatus.Items.AddRange(new object[] {
-            "Open",
-            "Close"});
-            this.comboboxStatus.Location = new System.Drawing.Point(197, 96);
-            this.comboboxStatus.Name = "comboboxStatus";
-            this.comboboxStatus.Size = new System.Drawing.Size(304, 28);
-            this.comboboxStatus.TabIndex = 0;
-            // 
             // NewProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,6 +430,7 @@
             this.MaximizeBox = false;
             this.Name = "NewProjectForm";
             this.Text = "New BWMP";
+            this.Load += new System.EventHandler(this.NewProjectForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

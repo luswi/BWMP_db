@@ -76,5 +76,9 @@ namespace BWMP_db.modules
             }
         }
 
+        private void NewProjectForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
