@@ -81,6 +81,8 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -94,6 +96,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbLcsStatus)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -179,7 +183,7 @@
             this.buttonDelete.BackColor = System.Drawing.Color.Crimson;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonDelete.Location = new System.Drawing.Point(955, 350);
+            this.buttonDelete.Location = new System.Drawing.Point(377, 19);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(99, 46);
             this.buttonDelete.TabIndex = 10;
@@ -280,7 +284,7 @@
             // 
             // buttonNPS
             // 
-            this.buttonNPS.Location = new System.Drawing.Point(1029, 565);
+            this.buttonNPS.Location = new System.Drawing.Point(257, 42);
             this.buttonNPS.Name = "buttonNPS";
             this.buttonNPS.Size = new System.Drawing.Size(75, 23);
             this.buttonNPS.TabIndex = 18;
@@ -303,7 +307,7 @@
             // 
             // buttonNew
             // 
-            this.buttonNew.Location = new System.Drawing.Point(934, 611);
+            this.buttonNew.Location = new System.Drawing.Point(43, 42);
             this.buttonNew.Name = "buttonNew";
             this.buttonNew.Size = new System.Drawing.Size(75, 23);
             this.buttonNew.TabIndex = 20;
@@ -313,7 +317,7 @@
             // 
             // buttonEditShow
             // 
-            this.buttonEditShow.Location = new System.Drawing.Point(1018, 611);
+            this.buttonEditShow.Location = new System.Drawing.Point(145, 42);
             this.buttonEditShow.Name = "buttonEditShow";
             this.buttonEditShow.Size = new System.Drawing.Size(75, 23);
             this.buttonEditShow.TabIndex = 22;
@@ -324,7 +328,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(435, 417);
+            this.pictureBox2.Location = new System.Drawing.Point(423, 351);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(64, 64);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -359,10 +363,10 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(440, 27);
+            this.tabControl1.Location = new System.Drawing.Point(6, 19);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(513, 513);
+            this.tabControl1.Size = new System.Drawing.Size(501, 447);
             this.tabControl1.TabIndex = 28;
             // 
             // tabPage1
@@ -374,7 +378,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(505, 487);
+            this.tabPage1.Size = new System.Drawing.Size(493, 421);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main Informations ->";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -389,9 +393,9 @@
             this.groupBox5.Controls.Add(this.labelSfaCreatedData);
             this.groupBox5.Controls.Add(this.labelNOrderData);
             this.groupBox5.Controls.Add(this.labelSfaSentData);
-            this.groupBox5.Location = new System.Drawing.Point(6, 253);
+            this.groupBox5.Location = new System.Drawing.Point(9, 188);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(493, 158);
+            this.groupBox5.Size = new System.Drawing.Size(478, 146);
             this.groupBox5.TabIndex = 32;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "SFA / NOrder";
@@ -487,9 +491,9 @@
             this.groupBox4.Controls.Add(this.labelVesselMethodSeqData);
             this.groupBox4.Controls.Add(this.labelVesselMethodFtData);
             this.groupBox4.Controls.Add(this.labelVesselMethodDilData);
-            this.groupBox4.Location = new System.Drawing.Point(6, 112);
+            this.groupBox4.Location = new System.Drawing.Point(6, 76);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(493, 135);
+            this.groupBox4.Size = new System.Drawing.Size(481, 106);
             this.groupBox4.TabIndex = 31;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "LCS / Methods";
@@ -591,7 +595,7 @@
             this.groupBox3.Controls.Add(this.labelVesselNameData);
             this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(493, 100);
+            this.groupBox3.Size = new System.Drawing.Size(481, 64);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Core Informations";
@@ -646,19 +650,39 @@
             this.tabPage4.Text = "Status";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.tabControl1);
+            this.groupBox6.Location = new System.Drawing.Point(440, 27);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(513, 513);
+            this.groupBox6.TabIndex = 29;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "groupBox6";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.buttonNew);
+            this.groupBox7.Controls.Add(this.buttonEditShow);
+            this.groupBox7.Controls.Add(this.buttonNPS);
+            this.groupBox7.Controls.Add(this.buttonDelete);
+            this.groupBox7.Location = new System.Drawing.Point(440, 546);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(513, 100);
+            this.groupBox7.TabIndex = 30;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "groupBox7";
+            // 
             // BWMP_db
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.buttonEditShow);
-            this.Controls.Add(this.buttonNew);
-            this.Controls.Add(this.buttonNPS);
             this.Controls.Add(this.textboxMainId);
-            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonAdd);
@@ -692,6 +716,8 @@
             this.groupBox3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -751,5 +777,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox7;
     }
 }
