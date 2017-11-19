@@ -393,7 +393,8 @@
             this.comboboxStatus.FormattingEnabled = true;
             this.comboboxStatus.Items.AddRange(new object[] {
             "Open",
-            "Close"});
+            "Close",
+            "OnHold"});
             this.comboboxStatus.Location = new System.Drawing.Point(197, 96);
             this.comboboxStatus.Name = "comboboxStatus";
             this.comboboxStatus.Size = new System.Drawing.Size(304, 28);

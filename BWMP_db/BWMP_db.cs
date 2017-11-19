@@ -29,39 +29,7 @@ namespace BWMP_db
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            // If empty then False.
-            if (textboxVesselId.Text != "" & textboxVesselName.Text != "")
-            {
-                // Get values from input fields.
-                v.VesselId = textboxVesselId.Text;
-                v.VesselName = textboxVesselName.Text;
-                v.VesselStatus = comboboxVesselStatus.Text;
-
-                // Inserting data into database
-                bool success = v.Insert(v);
-                if (success == true)
-                {
-                    // Succesfully inserted.
-                    MessageBox.Show("New BWMP succesfully inserted", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Clear method.
-                    Clear();
-                }
-                else
-                {
-                    // Failed to add.
-                    MessageBox.Show("UPS! Something goes wrong :(");
-                }
-
-                // Load data into data grid view after add.
-                DataTable dt = v.Select();
-                dataGridView1.DataSource = dt;
-            }
-            else
-            {
-
-                MessageBox.Show("Please provide ID and Vesssel name");
-            }
+            
 
         }
 
@@ -85,13 +53,7 @@ namespace BWMP_db
             dataGridView1.Columns["NOrder"].Visible = false;
             dataGridView1.Columns["SfaRec"].Visible = false;
 
-            // Select checkbox and load data only with selected option.
-            //string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
-            //SqlConnection conn = new SqlConnection(myconnstrng);
-            //SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open'", conn);
-            //DataTable checkbox = new DataTable();
-            //adapter.Fill(checkbox);
-            //dataGridView1.DataSource = checkbox;
+
         }
 
         //==============//
@@ -100,9 +62,9 @@ namespace BWMP_db
 
         public void Clear()
         {
-            textboxVesselId.Text = "";
-            textboxVesselName.Text = "";
-            comboboxVesselStatus.Text = "";
+            //textboxVesselId.Text = "";
+            //textboxVesselName.Text = "";
+            //comboboxVesselStatus.Text = "";
         }
 
         //=====================================================//
@@ -116,18 +78,22 @@ namespace BWMP_db
             if (rowIndex >= 0)
             {
                 textboxMainId.Text = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
-                textboxVesselId.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
-                textboxVesselName.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
+                labelVesselIdData.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
+                labelVesselNameData.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
+                labelVesselLcsData.Text = dataGridView1.Rows[rowIndex].Cells[4].Value.ToString();
+
+                //textboxVesselId.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
+                //textboxVesselName.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
                 comboboxVesselStatus.Text = dataGridView1.Rows[rowIndex].Cells[3].Value.ToString();
-                if(comboboxVesselStatus.Text == "Open")
+                if(labelVesselLcsData.Text == "Yes")
                 {
                     
-                    pbStatus.Image = Properties.Resources.yes;
+                    pbLcsStatus.Image = Properties.Resources.yes;
           
                 }
                 else
                 {
-                    pbStatus.Image = Properties.Resources.no;
+                    pbLcsStatus.Image = Properties.Resources.no;
                 }
             }
             else
@@ -155,8 +121,8 @@ namespace BWMP_db
             // Get data from texboxes.
             // We need to convert from string to int using Parse.
             v.MainId = int.Parse(textboxMainId.Text);
-            v.VesselId = textboxVesselId.Text;
-            v.VesselName = textboxVesselName.Text;
+            //v.VesselId = textboxVesselId.Text;
+            //v.VesselName = textboxVesselName.Text;
             v.VesselStatus = comboboxVesselStatus.Text;
 
             // Update data in database.
@@ -247,7 +213,7 @@ namespace BWMP_db
                 //string keyword = textboxSearch.Text;
 
                 SqlConnection conn = new SqlConnection(myconnstrng);
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open'", conn);
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open' OR VesselStatus LIKE 'OnHold'", conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
@@ -277,7 +243,7 @@ namespace BWMP_db
         {
             string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
             SqlConnection conn = new SqlConnection(myconnstrng);
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open'", conn);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open' OR VesselStatus Like 'OnHold'", conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -308,5 +274,7 @@ namespace BWMP_db
             editProject.textboxVesselId.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             editProject.ShowDialog();
         }
+
+
     }
 }

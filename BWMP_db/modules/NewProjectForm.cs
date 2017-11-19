@@ -37,7 +37,7 @@ namespace BWMP_db.modules
                 v.VesselId = textboxVesselId.Text;
                 v.VesselName = textboxVesselName.Text;
                 v.VesselStatus = comboboxStatus.Text;
-                //v.VesselLcs = comboboxVesselLcs.Text;
+                v.VesselLcs = comboboxVesselLcs.Text;
                 //v.VesselMethodSeq = comboboxVesselMethodSeq.Text;
                 //v.VesselMethodFt = comboboxVesselMethodFt.Text;
                 //v.VesselMethodDil = comboboxVesselMethodDil.Text;

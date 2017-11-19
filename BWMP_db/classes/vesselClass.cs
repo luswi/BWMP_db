@@ -77,14 +77,14 @@ namespace BWMP_db.classes
             {
                 // SQL Query.
                 //string sql = "INSERT INTO data(VesselId, VesselName, VesselStatus, VesselLcs, VesselMethodSeq, VesselMethodFt, VesselMethodDil, SfaCreated, SfaSent, NOrder, SfaRec) VALUES (@VesselId, @VesselName, @VesselStatus, @VesselLcs, @VesselMethodSeq, @VesselMethodFt, @VesselMethodDil, @SfaCreated, @SfaSent, @NOrder, @SfaRec)";
-                string sql = "INSERT INTO data(VesselId, VesselName, VesselStatus) VALUES (@VesselId, @VesselName, @VesselStatus)";
+                string sql = "INSERT INTO data(VesselId, VesselName, VesselStatus, VesselLcs) VALUES (@VesselId, @VesselName, @VesselStatus, @VesselLcs)";
                 // Creating cmd (combine sql and conn).
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 // Creating parameters to add data.
                 cmd.Parameters.AddWithValue("@VesselId", v.VesselId);
                 cmd.Parameters.AddWithValue("@VesselName", v.VesselName);
                 cmd.Parameters.AddWithValue("@VesselStatus", v.VesselStatus);
-                //cmd.Parameters.AddWithValue("@VesselLcs", v.VesselLcs);
+                cmd.Parameters.AddWithValue("@VesselLcs", v.VesselLcs);
                 //cmd.Parameters.AddWithValue("@VesselMethodSeq", v.VesselMethodSeq);
                 //cmd.Parameters.AddWithValue("@VesselMethodFt", v.VesselMethodFt);
                 //cmd.Parameters.AddWithValue("@VesselMethodDil", v.VesselMethodDil);
