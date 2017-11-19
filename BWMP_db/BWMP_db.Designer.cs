@@ -51,6 +51,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonNPS = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.bWMPdbInformacjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -251,6 +252,8 @@
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bWMPdbInformacjeToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
@@ -277,6 +280,13 @@
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // bWMPdbInformacjeToolStripMenuItem
+            // 
+            this.bWMPdbInformacjeToolStripMenuItem.Name = "bWMPdbInformacjeToolStripMenuItem";
+            this.bWMPdbInformacjeToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.bWMPdbInformacjeToolStripMenuItem.Text = "BWMP_db - Info";
+            this.bWMPdbInformacjeToolStripMenuItem.Click += new System.EventHandler(this.bWMPdbInfoToolStripMenuItem_Click);
             // 
             // BWMP_db
             // 
@@ -342,5 +352,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Button buttonNPS;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ToolStripMenuItem bWMPdbInformacjeToolStripMenuItem;
     }
 }

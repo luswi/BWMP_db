@@ -21,12 +21,13 @@ namespace BWMP_db.classes
         public string VesselId { get; set; }
         public string VesselName { get; set; }
         public string VesselStatus { get; set; }
-        public string VesselLCS { get; set; }
+        public string VesselLcs { get; set; }
         public string VesselMethodSeq { get; set; }
-        public string VesselMethodFlow { get; set; }
+        public string VesselMethodFt { get; set; }
+        public string VesselMethodDil { get; set; }
         public string SfaCreated { get; set; }
-        public string NOrder { get; set; }
         public string SfaSent { get; set; }
+        public string NOrder { get; set; }
         public string SfaRec { get; set; }
 
         // Connection string to SQL Local database.
