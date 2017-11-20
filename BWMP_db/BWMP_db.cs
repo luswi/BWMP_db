@@ -52,6 +52,15 @@ namespace BWMP_db
             dataGridView1.Columns["SfaSent"].Visible = false;
             dataGridView1.Columns["NOrder"].Visible = false;
             dataGridView1.Columns["SfaRec"].Visible = false;
+            dataGridView1.Columns["AppStage"].Visible = false;
+            dataGridView1.Columns["Certificate"].Visible = false;
+            dataGridView1.Columns["SharePoint"].Visible = false;
+            //dataGridView1.Columns["Hmax"].Visible = false;
+            dataGridView1.Columns["Hadd"].Visible = false;
+            dataGridView1.Columns["Hused"].Visible = false;
+            dataGridView1.Columns["Notes"].Visible = false;
+            dataGridView1.Columns["PoChecked"].Visible = false;
+            dataGridView1.Columns["NOrderClosed"].Visible = false;
 
 
         }
@@ -80,21 +89,53 @@ namespace BWMP_db
                 textboxMainId.Text = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
                 labelVesselIdData.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
                 labelVesselNameData.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
+                labelVesselStatusData.Text = dataGridView1.Rows[rowIndex].Cells[3].Value.ToString();
                 labelVesselLcsData.Text = dataGridView1.Rows[rowIndex].Cells[4].Value.ToString();
+                labelVesselMethodSeqData.Text = dataGridView1.Rows[rowIndex].Cells[5].Value.ToString();
+                labelVesselMethodFtData.Text = dataGridView1.Rows[rowIndex].Cells[6].Value.ToString();
+                labelVesselMethodDilData.Text = dataGridView1.Rows[rowIndex].Cells[7].Value.ToString();
+                labelSfaCreatedData.Text = dataGridView1.Rows[rowIndex].Cells[8].Value.ToString();
+                labelSfaSentData.Text = dataGridView1.Rows[rowIndex].Cells[9].Value.ToString();
+                labelNOrderData.Text = dataGridView1.Rows[rowIndex].Cells[10].Value.ToString();
+                labelSfaRecData.Text = dataGridView1.Rows[rowIndex].Cells[11].Value.ToString();
 
-                //textboxVesselId.Text = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
-                //textboxVesselName.Text = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
-                comboboxVesselStatus.Text = dataGridView1.Rows[rowIndex].Cells[3].Value.ToString();
-                if(labelVesselLcsData.Text == "Yes")
-                {
-                    
-                    pbLcsStatus.Image = Properties.Resources.yes;
-          
-                }
-                else
-                {
-                    pbLcsStatus.Image = Properties.Resources.no;
-                }
+                labelAppStageData.Text = dataGridView1.Rows[rowIndex].Cells[12].Value.ToString();
+                labelCertificateData.Text = dataGridView1.Rows[rowIndex].Cells[13].Value.ToString();
+                labelSharePointData.Text = dataGridView1.Rows[rowIndex].Cells[14].Value.ToString();
+                // here hmax....
+                textBoxNotesData.Text = dataGridView1.Rows[rowIndex].Cells[18].Value.ToString();
+                labelPoCheckedData.Text = dataGridView1.Rows[rowIndex].Cells[19].Value.ToString();
+                labelNOrderClosedData.Text = dataGridView1.Rows[rowIndex].Cells[20].Value.ToString();
+
+                
+                // condition check and show image Yes/No.
+
+                // LCS / Methods If nothing then No if selected anything then Yes
+                if (labelVesselLcsData.Text == "") { pbLcsStatus.Image = Properties.Resources.no; }
+                else { pbLcsStatus.Image = Properties.Resources.yes; }
+                if (labelVesselMethodSeqData.Text == "") { pbSeqStatus.Image = Properties.Resources.no; }
+                else { pbSeqStatus.Image = Properties.Resources.yes; }
+                if (labelVesselMethodFtData.Text == "") { pbFtStatus.Image = Properties.Resources.no; }
+                else { pbFtStatus.Image = Properties.Resources.yes; }
+                if (labelVesselMethodDilData.Text == "") { pbDilStatus.Image = Properties.Resources.no; }
+                else { pbDilStatus.Image = Properties.Resources.yes; }
+
+                // SFA / NOrder
+                if (labelSfaCreatedData.Text == "Yes" || labelSfaCreatedData.Text == "SC") { pbSfaCreatedStatus.Image = Properties.Resources.yes; }
+                else { pbSfaCreatedStatus.Image = Properties.Resources.no; }
+                if (labelSfaSentData.Text == "Yes" || labelSfaSentData.Text == "SC") { pbSfaSentStatus.Image = Properties.Resources.yes; }
+                else { pbSfaSentStatus.Image = Properties.Resources.no; }
+                if (labelNOrderData.Text == "Yes") { pbNOrderStatus.Image = Properties.Resources.yes; }
+                else { pbNOrderStatus.Image = Properties.Resources.no; }
+                if (labelSfaRecData.Text == "Yes" || labelSfaRecData.Text == "SC") { pbSfaRecStatus.Image = Properties.Resources.yes; }
+                else { pbSfaRecStatus.Image = Properties.Resources.no; }
+
+            
+                double valueok = double.Parse(dataGridView1.Rows[rowIndex].Cells[15].Value.ToString());
+                double minus = 40.0;
+                double wynik = valueok - minus;
+                labelCalc.Text = wynik.ToString();
+                
             }
             else
             {
@@ -123,7 +164,7 @@ namespace BWMP_db
             v.MainId = int.Parse(textboxMainId.Text);
             //v.VesselId = textboxVesselId.Text;
             //v.VesselName = textboxVesselName.Text;
-            v.VesselStatus = comboboxVesselStatus.Text;
+            //v.VesselStatus = comboboxVesselStatus.Text;
 
             // Update data in database.
             bool success = v.Update(v);

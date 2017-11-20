@@ -56,9 +56,30 @@
             this.textboxVesselId = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textboxNotes = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboboxHmax = new System.Windows.Forms.ComboBox();
+            this.comboboxSharePoint = new System.Windows.Forms.ComboBox();
+            this.comboboxCertificate = new System.Windows.Forms.ComboBox();
+            this.comboboxApprovalStage = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.comboboxNOrderClosed = new System.Windows.Forms.ComboBox();
+            this.comboboxPoChecked = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.comboboxStatus = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.newProject = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
@@ -67,7 +88,16 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -81,7 +111,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(876, 599);
+            this.tabControl1.Size = new System.Drawing.Size(510, 599);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Tag = "";
             // 
@@ -93,7 +123,7 @@
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(868, 566);
+            this.tabPage1.Size = new System.Drawing.Size(502, 566);
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Main Informations ->";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -110,7 +140,7 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Location = new System.Drawing.Point(3, 312);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(615, 251);
+            this.groupBox3.Size = new System.Drawing.Size(386, 251);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "SFA / NOrder";
@@ -134,7 +164,7 @@
             this.comboboxSfaRec.Items.AddRange(new object[] {
             "Yes",
             "No",
-            "Special Case"});
+            "SC"});
             this.comboboxSfaRec.Location = new System.Drawing.Point(136, 127);
             this.comboboxSfaRec.Name = "comboboxSfaRec";
             this.comboboxSfaRec.Size = new System.Drawing.Size(223, 28);
@@ -147,7 +177,7 @@
             this.comboboxSfaSent.Items.AddRange(new object[] {
             "Yes",
             "No",
-            "Special Case"});
+            "SC"});
             this.comboboxSfaSent.Location = new System.Drawing.Point(136, 59);
             this.comboboxSfaSent.Name = "comboboxSfaSent";
             this.comboboxSfaSent.Size = new System.Drawing.Size(223, 28);
@@ -160,7 +190,7 @@
             this.comboboxSfaCreated.Items.AddRange(new object[] {
             "Yes",
             "No",
-            "Special Case"});
+            "SC"});
             this.comboboxSfaCreated.Location = new System.Drawing.Point(136, 25);
             this.comboboxSfaCreated.Name = "comboboxSfaCreated";
             this.comboboxSfaCreated.Size = new System.Drawing.Size(223, 28);
@@ -214,7 +244,7 @@
             this.groupBox2.Controls.Add(this.comboboxVesselLcs);
             this.groupBox2.Location = new System.Drawing.Point(3, 108);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(615, 198);
+            this.groupBox2.Size = new System.Drawing.Size(386, 198);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "LCS / Methods";
@@ -309,9 +339,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textboxVesselName);
             this.groupBox1.Controls.Add(this.textboxVesselId);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(3, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(615, 99);
+            this.groupBox1.Size = new System.Drawing.Size(386, 99);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Core informations";
@@ -351,58 +381,296 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(653, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(403, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.Size = new System.Drawing.Size(96, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox5);
+            this.tabPage2.Controls.Add(this.pictureBox2);
+            this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(868, 566);
+            this.tabPage2.Size = new System.Drawing.Size(502, 566);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Approval Process ->";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textboxNotes);
+            this.groupBox5.Location = new System.Drawing.Point(3, 179);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(386, 345);
+            this.groupBox5.TabIndex = 9;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Notes";
+            // 
+            // textboxNotes
+            // 
+            this.textboxNotes.Location = new System.Drawing.Point(3, 25);
+            this.textboxNotes.Multiline = true;
+            this.textboxNotes.Name = "textboxNotes";
+            this.textboxNotes.Size = new System.Drawing.Size(377, 314);
+            this.textboxNotes.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(403, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(96, 96);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.comboboxHmax);
+            this.groupBox4.Controls.Add(this.comboboxSharePoint);
+            this.groupBox4.Controls.Add(this.comboboxCertificate);
+            this.groupBox4.Controls.Add(this.comboboxApprovalStage);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Location = new System.Drawing.Point(3, 6);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(386, 167);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "BWMP Approval";
+            // 
+            // comboboxHmax
+            // 
+            this.comboboxHmax.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxHmax.FormattingEnabled = true;
+            this.comboboxHmax.Items.AddRange(new object[] {
+            "4.5",
+            "5.5",
+            "6.5"});
+            this.comboboxHmax.Location = new System.Drawing.Point(136, 124);
+            this.comboboxHmax.Name = "comboboxHmax";
+            this.comboboxHmax.Size = new System.Drawing.Size(223, 28);
+            this.comboboxHmax.TabIndex = 7;
+            // 
+            // comboboxSharePoint
+            // 
+            this.comboboxSharePoint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxSharePoint.FormattingEnabled = true;
+            this.comboboxSharePoint.Items.AddRange(new object[] {
+            "Update!",
+            "OK"});
+            this.comboboxSharePoint.Location = new System.Drawing.Point(136, 90);
+            this.comboboxSharePoint.Name = "comboboxSharePoint";
+            this.comboboxSharePoint.Size = new System.Drawing.Size(223, 28);
+            this.comboboxSharePoint.TabIndex = 6;
+            // 
+            // comboboxCertificate
+            // 
+            this.comboboxCertificate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxCertificate.FormattingEnabled = true;
+            this.comboboxCertificate.Items.AddRange(new object[] {
+            "Yes",
+            "No",
+            "SC"});
+            this.comboboxCertificate.Location = new System.Drawing.Point(136, 56);
+            this.comboboxCertificate.Name = "comboboxCertificate";
+            this.comboboxCertificate.Size = new System.Drawing.Size(223, 28);
+            this.comboboxCertificate.TabIndex = 5;
+            // 
+            // comboboxApprovalStage
+            // 
+            this.comboboxApprovalStage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxApprovalStage.FormattingEnabled = true;
+            this.comboboxApprovalStage.Items.AddRange(new object[] {
+            "pre-check",
+            "Started",
+            "Approved",
+            "SC",
+            "Verification",
+            "Rev."});
+            this.comboboxApprovalStage.Location = new System.Drawing.Point(136, 22);
+            this.comboboxApprovalStage.Name = "comboboxApprovalStage";
+            this.comboboxApprovalStage.Size = new System.Drawing.Size(223, 28);
+            this.comboboxApprovalStage.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(11, 59);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 20);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Certificate";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(11, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(118, 20);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Approval Stage";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(11, 93);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(92, 20);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Share Point";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(11, 127);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 20);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "[h] max";
+            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox6);
+            this.tabPage3.Controls.Add(this.pictureBox3);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(868, 566);
+            this.tabPage3.Size = new System.Drawing.Size(502, 566);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Invoicing ->";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.comboboxNOrderClosed);
+            this.groupBox6.Controls.Add(this.comboboxPoChecked);
+            this.groupBox6.Controls.Add(this.label19);
+            this.groupBox6.Controls.Add(this.label18);
+            this.groupBox6.Location = new System.Drawing.Point(3, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(386, 96);
+            this.groupBox6.TabIndex = 8;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Invoice";
+            // 
+            // comboboxNOrderClosed
+            // 
+            this.comboboxNOrderClosed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxNOrderClosed.FormattingEnabled = true;
+            this.comboboxNOrderClosed.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.comboboxNOrderClosed.Location = new System.Drawing.Point(136, 56);
+            this.comboboxNOrderClosed.Name = "comboboxNOrderClosed";
+            this.comboboxNOrderClosed.Size = new System.Drawing.Size(223, 28);
+            this.comboboxNOrderClosed.TabIndex = 8;
+            // 
+            // comboboxPoChecked
+            // 
+            this.comboboxPoChecked.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxPoChecked.FormattingEnabled = true;
+            this.comboboxPoChecked.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.comboboxPoChecked.Location = new System.Drawing.Point(136, 22);
+            this.comboboxPoChecked.Name = "comboboxPoChecked";
+            this.comboboxPoChecked.Size = new System.Drawing.Size(223, 28);
+            this.comboboxPoChecked.TabIndex = 7;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(11, 25);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(95, 20);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "PO checked";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(11, 59);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(110, 20);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "NOrder closed";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(400, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(96, 96);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.comboboxStatus);
+            this.tabPage4.Controls.Add(this.groupBox7);
+            this.tabPage4.Controls.Add(this.pictureBox4);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(868, 566);
+            this.tabPage4.Size = new System.Drawing.Size(502, 566);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Status";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.comboboxStatus);
+            this.groupBox7.Controls.Add(this.label20);
+            this.groupBox7.Location = new System.Drawing.Point(3, 6);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(386, 96);
+            this.groupBox7.TabIndex = 9;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Status";
+            // 
             // comboboxStatus
             // 
+            this.comboboxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxStatus.FormattingEnabled = true;
             this.comboboxStatus.Items.AddRange(new object[] {
             "Open",
             "Close",
-            "OnHold"});
-            this.comboboxStatus.Location = new System.Drawing.Point(197, 96);
+            "OnHold",
+            "Piraeus"});
+            this.comboboxStatus.Location = new System.Drawing.Point(136, 22);
             this.comboboxStatus.Name = "comboboxStatus";
-            this.comboboxStatus.Size = new System.Drawing.Size(304, 28);
+            this.comboboxStatus.Size = new System.Drawing.Size(223, 28);
             this.comboboxStatus.TabIndex = 0;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(11, 25);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(86, 20);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Job Status";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(403, 6);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(96, 96);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
             // 
             // newProject
             // 
-            this.newProject.Location = new System.Drawing.Point(728, 628);
+            this.newProject.Location = new System.Drawing.Point(195, 617);
             this.newProject.Name = "newProject";
             this.newProject.Size = new System.Drawing.Size(75, 23);
             this.newProject.TabIndex = 1;
@@ -412,7 +680,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(809, 628);
+            this.button2.Location = new System.Drawing.Point(307, 617);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -423,7 +691,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 663);
+            this.ClientSize = new System.Drawing.Size(534, 663);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.newProject);
             this.Controls.Add(this.tabControl1);
@@ -441,7 +709,22 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -480,5 +763,26 @@
         private System.Windows.Forms.Button newProject;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboboxStatus;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ComboBox comboboxHmax;
+        private System.Windows.Forms.ComboBox comboboxSharePoint;
+        private System.Windows.Forms.ComboBox comboboxCertificate;
+        private System.Windows.Forms.ComboBox comboboxApprovalStage;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox textboxNotes;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ComboBox comboboxNOrderClosed;
+        private System.Windows.Forms.ComboBox comboboxPoChecked;
+        private System.Windows.Forms.GroupBox groupBox7;
     }
 }

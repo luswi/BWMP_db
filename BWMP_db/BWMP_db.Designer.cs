@@ -33,8 +33,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelVesselId = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.labelStatus = new System.Windows.Forms.Label();
-            this.comboboxVesselStatus = new System.Windows.Forms.ComboBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
@@ -56,7 +54,13 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelHmax = new System.Windows.Forms.Label();
+            this.labelCalc = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.pbSfaRecStatus = new System.Windows.Forms.PictureBox();
+            this.pbNOrderStatus = new System.Windows.Forms.PictureBox();
+            this.pbSfaSentStatus = new System.Windows.Forms.PictureBox();
+            this.pbSfaCreatedStatus = new System.Windows.Forms.PictureBox();
             this.labelSfaCreated = new System.Windows.Forms.Label();
             this.labelSfaSent = new System.Windows.Forms.Label();
             this.labelNOrder = new System.Windows.Forms.Label();
@@ -66,6 +70,9 @@
             this.labelNOrderData = new System.Windows.Forms.Label();
             this.labelSfaSentData = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pbDilStatus = new System.Windows.Forms.PictureBox();
+            this.pbFtStatus = new System.Windows.Forms.PictureBox();
+            this.pbSeqStatus = new System.Windows.Forms.PictureBox();
             this.labelVesselLcs = new System.Windows.Forms.Label();
             this.labelVesselMethodSeq = new System.Windows.Forms.Label();
             this.labelVesselMethodFt = new System.Windows.Forms.Label();
@@ -79,10 +86,36 @@
             this.labelVesselIdData = new System.Windows.Forms.Label();
             this.labelVesselNameData = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.textBoxNotesData = new System.Windows.Forms.TextBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.labelSharePointData = new System.Windows.Forms.Label();
+            this.labelCertificateData = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelAppStageData = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelPoCheckedData = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelVesselStatusData = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.labelNOrderClosedData = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -92,10 +125,24 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSfaRecStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNOrderStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSfaSentStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSfaCreatedStatus)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDilStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFtStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSeqStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLcsStatus)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.SuspendLayout();
@@ -130,34 +177,12 @@
             this.labelName.TabIndex = 3;
             this.labelName.Text = "Vessel Name";
             // 
-            // labelStatus
-            // 
-            this.labelStatus.AutoSize = true;
-            this.labelStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelStatus.Location = new System.Drawing.Point(91, 64);
-            this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(56, 20);
-            this.labelStatus.TabIndex = 5;
-            this.labelStatus.Text = "Status";
-            // 
-            // comboboxVesselStatus
-            // 
-            this.comboboxVesselStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboboxVesselStatus.FormattingEnabled = true;
-            this.comboboxVesselStatus.Items.AddRange(new object[] {
-            "Open",
-            "Close"});
-            this.comboboxVesselStatus.Location = new System.Drawing.Point(198, 64);
-            this.comboboxVesselStatus.Name = "comboboxVesselStatus";
-            this.comboboxVesselStatus.Size = new System.Drawing.Size(173, 28);
-            this.comboboxVesselStatus.TabIndex = 6;
-            // 
             // buttonAdd
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(959, 288);
+            this.buttonAdd.Location = new System.Drawing.Point(1024, 527);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(99, 46);
             this.buttonAdd.TabIndex = 7;
@@ -170,7 +195,7 @@
             this.buttonUpdate.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(1073, 288);
+            this.buttonUpdate.Location = new System.Drawing.Point(1024, 588);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(99, 46);
             this.buttonUpdate.TabIndex = 8;
@@ -244,7 +269,7 @@
             // 
             this.textboxMainId.Enabled = false;
             this.textboxMainId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textboxMainId.Location = new System.Drawing.Point(959, 241);
+            this.textboxMainId.Location = new System.Drawing.Point(980, 449);
             this.textboxMainId.Name = "textboxMainId";
             this.textboxMainId.Size = new System.Drawing.Size(173, 26);
             this.textboxMainId.TabIndex = 15;
@@ -371,6 +396,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.labelHmax);
+            this.tabPage1.Controls.Add(this.labelCalc);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.groupBox3);
@@ -383,8 +410,30 @@
             this.tabPage1.Text = "Main Informations ->";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // labelHmax
+            // 
+            this.labelHmax.AutoSize = true;
+            this.labelHmax.Location = new System.Drawing.Point(13, 360);
+            this.labelHmax.Name = "labelHmax";
+            this.labelHmax.Size = new System.Drawing.Size(35, 13);
+            this.labelHmax.TabIndex = 34;
+            this.labelHmax.Text = "label1";
+            // 
+            // labelCalc
+            // 
+            this.labelCalc.AutoSize = true;
+            this.labelCalc.Location = new System.Drawing.Point(168, 371);
+            this.labelCalc.Name = "labelCalc";
+            this.labelCalc.Size = new System.Drawing.Size(35, 13);
+            this.labelCalc.TabIndex = 33;
+            this.labelCalc.Text = "label1";
+            // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.pbSfaRecStatus);
+            this.groupBox5.Controls.Add(this.pbNOrderStatus);
+            this.groupBox5.Controls.Add(this.pbSfaSentStatus);
+            this.groupBox5.Controls.Add(this.pbSfaCreatedStatus);
             this.groupBox5.Controls.Add(this.labelSfaCreated);
             this.groupBox5.Controls.Add(this.labelSfaSent);
             this.groupBox5.Controls.Add(this.labelNOrder);
@@ -400,11 +449,47 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "SFA / NOrder";
             // 
+            // pbSfaRecStatus
+            // 
+            this.pbSfaRecStatus.Location = new System.Drawing.Point(207, 76);
+            this.pbSfaRecStatus.Name = "pbSfaRecStatus";
+            this.pbSfaRecStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbSfaRecStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSfaRecStatus.TabIndex = 33;
+            this.pbSfaRecStatus.TabStop = false;
+            // 
+            // pbNOrderStatus
+            // 
+            this.pbNOrderStatus.Location = new System.Drawing.Point(207, 58);
+            this.pbNOrderStatus.Name = "pbNOrderStatus";
+            this.pbNOrderStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbNOrderStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbNOrderStatus.TabIndex = 32;
+            this.pbNOrderStatus.TabStop = false;
+            // 
+            // pbSfaSentStatus
+            // 
+            this.pbSfaSentStatus.Location = new System.Drawing.Point(207, 36);
+            this.pbSfaSentStatus.Name = "pbSfaSentStatus";
+            this.pbSfaSentStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbSfaSentStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSfaSentStatus.TabIndex = 31;
+            this.pbSfaSentStatus.TabStop = false;
+            // 
+            // pbSfaCreatedStatus
+            // 
+            this.pbSfaCreatedStatus.Location = new System.Drawing.Point(207, 16);
+            this.pbSfaCreatedStatus.Name = "pbSfaCreatedStatus";
+            this.pbSfaCreatedStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbSfaCreatedStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSfaCreatedStatus.TabIndex = 30;
+            this.pbSfaCreatedStatus.TabStop = false;
+            // 
             // labelSfaCreated
             // 
             this.labelSfaCreated.AutoSize = true;
             this.labelSfaCreated.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSfaCreated.Location = new System.Drawing.Point(6, 48);
+            this.labelSfaCreated.Location = new System.Drawing.Point(2, 16);
             this.labelSfaCreated.Name = "labelSfaCreated";
             this.labelSfaCreated.Size = new System.Drawing.Size(99, 20);
             this.labelSfaCreated.TabIndex = 13;
@@ -414,7 +499,7 @@
             // 
             this.labelSfaSent.AutoSize = true;
             this.labelSfaSent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSfaSent.Location = new System.Drawing.Point(9, 68);
+            this.labelSfaSent.Location = new System.Drawing.Point(2, 36);
             this.labelSfaSent.Name = "labelSfaSent";
             this.labelSfaSent.Size = new System.Drawing.Size(76, 20);
             this.labelSfaSent.TabIndex = 14;
@@ -424,7 +509,7 @@
             // 
             this.labelNOrder.AutoSize = true;
             this.labelNOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelNOrder.Location = new System.Drawing.Point(9, 88);
+            this.labelNOrder.Location = new System.Drawing.Point(2, 56);
             this.labelNOrder.Name = "labelNOrder";
             this.labelNOrder.Size = new System.Drawing.Size(60, 20);
             this.labelNOrder.TabIndex = 15;
@@ -434,7 +519,7 @@
             // 
             this.labelSfaRec.AutoSize = true;
             this.labelSfaRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSfaRec.Location = new System.Drawing.Point(9, 108);
+            this.labelSfaRec.Location = new System.Drawing.Point(2, 76);
             this.labelSfaRec.Name = "labelSfaRec";
             this.labelSfaRec.Size = new System.Drawing.Size(104, 20);
             this.labelSfaRec.TabIndex = 16;
@@ -444,7 +529,7 @@
             // 
             this.labelSfaRecData.AutoSize = true;
             this.labelSfaRecData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSfaRecData.Location = new System.Drawing.Point(155, 108);
+            this.labelSfaRecData.Location = new System.Drawing.Point(155, 76);
             this.labelSfaRecData.Name = "labelSfaRecData";
             this.labelSfaRecData.Size = new System.Drawing.Size(46, 20);
             this.labelSfaRecData.TabIndex = 24;
@@ -454,7 +539,7 @@
             // 
             this.labelSfaCreatedData.AutoSize = true;
             this.labelSfaCreatedData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSfaCreatedData.Location = new System.Drawing.Point(155, 48);
+            this.labelSfaCreatedData.Location = new System.Drawing.Point(155, 16);
             this.labelSfaCreatedData.Name = "labelSfaCreatedData";
             this.labelSfaCreatedData.Size = new System.Drawing.Size(46, 20);
             this.labelSfaCreatedData.TabIndex = 21;
@@ -464,7 +549,7 @@
             // 
             this.labelNOrderData.AutoSize = true;
             this.labelNOrderData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelNOrderData.Location = new System.Drawing.Point(158, 88);
+            this.labelNOrderData.Location = new System.Drawing.Point(155, 56);
             this.labelNOrderData.Name = "labelNOrderData";
             this.labelNOrderData.Size = new System.Drawing.Size(46, 20);
             this.labelNOrderData.TabIndex = 23;
@@ -474,7 +559,7 @@
             // 
             this.labelSfaSentData.AutoSize = true;
             this.labelSfaSentData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSfaSentData.Location = new System.Drawing.Point(155, 68);
+            this.labelSfaSentData.Location = new System.Drawing.Point(155, 36);
             this.labelSfaSentData.Name = "labelSfaSentData";
             this.labelSfaSentData.Size = new System.Drawing.Size(46, 20);
             this.labelSfaSentData.TabIndex = 22;
@@ -482,6 +567,9 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.pbDilStatus);
+            this.groupBox4.Controls.Add(this.pbFtStatus);
+            this.groupBox4.Controls.Add(this.pbSeqStatus);
             this.groupBox4.Controls.Add(this.labelVesselLcs);
             this.groupBox4.Controls.Add(this.labelVesselMethodSeq);
             this.groupBox4.Controls.Add(this.labelVesselMethodFt);
@@ -497,6 +585,33 @@
             this.groupBox4.TabIndex = 31;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "LCS / Methods";
+            // 
+            // pbDilStatus
+            // 
+            this.pbDilStatus.Location = new System.Drawing.Point(210, 76);
+            this.pbDilStatus.Name = "pbDilStatus";
+            this.pbDilStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbDilStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDilStatus.TabIndex = 32;
+            this.pbDilStatus.TabStop = false;
+            // 
+            // pbFtStatus
+            // 
+            this.pbFtStatus.Location = new System.Drawing.Point(210, 56);
+            this.pbFtStatus.Name = "pbFtStatus";
+            this.pbFtStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbFtStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFtStatus.TabIndex = 31;
+            this.pbFtStatus.TabStop = false;
+            // 
+            // pbSeqStatus
+            // 
+            this.pbSeqStatus.Location = new System.Drawing.Point(210, 36);
+            this.pbSeqStatus.Name = "pbSeqStatus";
+            this.pbSeqStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbSeqStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSeqStatus.TabIndex = 30;
+            this.pbSeqStatus.TabStop = false;
             // 
             // labelVesselLcs
             // 
@@ -622,33 +737,291 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox12);
+            this.tabPage2.Controls.Add(this.groupBox11);
+            this.tabPage2.Controls.Add(this.groupBox8);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(505, 467);
+            this.tabPage2.Size = new System.Drawing.Size(493, 421);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Approval Process ->";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.textBoxNotesData);
+            this.groupBox12.Location = new System.Drawing.Point(6, 217);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(481, 198);
+            this.groupBox12.TabIndex = 2;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Notes";
+            // 
+            // textBoxNotesData
+            // 
+            this.textBoxNotesData.Location = new System.Drawing.Point(6, 19);
+            this.textBoxNotesData.Multiline = true;
+            this.textBoxNotesData.Name = "textBoxNotesData";
+            this.textBoxNotesData.ReadOnly = true;
+            this.textBoxNotesData.Size = new System.Drawing.Size(469, 173);
+            this.textBoxNotesData.TabIndex = 0;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.label18);
+            this.groupBox11.Controls.Add(this.label17);
+            this.groupBox11.Controls.Add(this.label16);
+            this.groupBox11.Controls.Add(this.label15);
+            this.groupBox11.Controls.Add(this.label14);
+            this.groupBox11.Controls.Add(this.label13);
+            this.groupBox11.Controls.Add(this.label12);
+            this.groupBox11.Controls.Add(this.label11);
+            this.groupBox11.Location = new System.Drawing.Point(6, 99);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(481, 112);
+            this.groupBox11.TabIndex = 1;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Time";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label18.Location = new System.Drawing.Point(158, 76);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(46, 20);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "show";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label17.Location = new System.Drawing.Point(6, 76);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(74, 20);
+            this.label17.TabIndex = 15;
+            this.label17.Text = "Time add";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label16.Location = new System.Drawing.Point(158, 56);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(46, 20);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "show";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label15.Location = new System.Drawing.Point(6, 56);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(76, 20);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "Time max";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label14.Location = new System.Drawing.Point(158, 36);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 20);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "show";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label13.Location = new System.Drawing.Point(5, 36);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(82, 20);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Time used";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label12.Location = new System.Drawing.Point(158, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 20);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "show";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label11.Location = new System.Drawing.Point(6, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 20);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Time left";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.label10);
+            this.groupBox8.Controls.Add(this.labelSharePointData);
+            this.groupBox8.Controls.Add(this.labelCertificateData);
+            this.groupBox8.Controls.Add(this.label7);
+            this.groupBox8.Controls.Add(this.label1);
+            this.groupBox8.Controls.Add(this.labelAppStageData);
+            this.groupBox8.Location = new System.Drawing.Point(6, 6);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(481, 87);
+            this.groupBox8.TabIndex = 0;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "BWMP Approval";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.Location = new System.Drawing.Point(5, 56);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 20);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Share Point";
+            // 
+            // labelSharePointData
+            // 
+            this.labelSharePointData.AutoSize = true;
+            this.labelSharePointData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelSharePointData.Location = new System.Drawing.Point(158, 56);
+            this.labelSharePointData.Name = "labelSharePointData";
+            this.labelSharePointData.Size = new System.Drawing.Size(46, 20);
+            this.labelSharePointData.TabIndex = 12;
+            this.labelSharePointData.Text = "show";
+            // 
+            // labelCertificateData
+            // 
+            this.labelCertificateData.AutoSize = true;
+            this.labelCertificateData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelCertificateData.Location = new System.Drawing.Point(158, 36);
+            this.labelCertificateData.Name = "labelCertificateData";
+            this.labelCertificateData.Size = new System.Drawing.Size(46, 20);
+            this.labelCertificateData.TabIndex = 11;
+            this.labelCertificateData.Text = "show";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(5, 36);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Certificate";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(5, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Approval Stage";
+            // 
+            // labelAppStageData
+            // 
+            this.labelAppStageData.AutoSize = true;
+            this.labelAppStageData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelAppStageData.Location = new System.Drawing.Point(158, 16);
+            this.labelAppStageData.Name = "labelAppStageData";
+            this.labelAppStageData.Size = new System.Drawing.Size(46, 20);
+            this.labelAppStageData.TabIndex = 9;
+            this.labelAppStageData.Text = "show";
+            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox9);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(505, 467);
+            this.tabPage3.Size = new System.Drawing.Size(493, 421);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Invoicing ->";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.labelNOrderClosedData);
+            this.groupBox9.Controls.Add(this.label19);
+            this.groupBox9.Controls.Add(this.label3);
+            this.groupBox9.Controls.Add(this.labelPoCheckedData);
+            this.groupBox9.Location = new System.Drawing.Point(6, 6);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(481, 70);
+            this.groupBox9.TabIndex = 0;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Invoice";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(5, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "PO Checked";
+            // 
+            // labelPoCheckedData
+            // 
+            this.labelPoCheckedData.AutoSize = true;
+            this.labelPoCheckedData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelPoCheckedData.Location = new System.Drawing.Point(158, 16);
+            this.labelPoCheckedData.Name = "labelPoCheckedData";
+            this.labelPoCheckedData.Size = new System.Drawing.Size(46, 20);
+            this.labelPoCheckedData.TabIndex = 9;
+            this.labelPoCheckedData.Text = "show";
+            // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.labelStatus);
-            this.tabPage4.Controls.Add(this.comboboxVesselStatus);
+            this.tabPage4.Controls.Add(this.groupBox10);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(505, 467);
+            this.tabPage4.Size = new System.Drawing.Size(493, 421);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Status";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.label5);
+            this.groupBox10.Controls.Add(this.labelVesselStatusData);
+            this.groupBox10.Location = new System.Drawing.Point(6, 6);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(481, 61);
+            this.groupBox10.TabIndex = 7;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Status";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(5, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Job Status";
+            // 
+            // labelVesselStatusData
+            // 
+            this.labelVesselStatusData.AutoSize = true;
+            this.labelVesselStatusData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelVesselStatusData.Location = new System.Drawing.Point(158, 16);
+            this.labelVesselStatusData.Name = "labelVesselStatusData";
+            this.labelVesselStatusData.Size = new System.Drawing.Size(46, 20);
+            this.labelVesselStatusData.TabIndex = 9;
+            this.labelVesselStatusData.Text = "show";
             // 
             // groupBox6
             // 
@@ -658,7 +1031,7 @@
             this.groupBox6.Size = new System.Drawing.Size(513, 513);
             this.groupBox6.TabIndex = 29;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "groupBox6";
+            this.groupBox6.Text = "BWMP Information";
             // 
             // groupBox7
             // 
@@ -671,7 +1044,27 @@
             this.groupBox7.Size = new System.Drawing.Size(513, 100);
             this.groupBox7.TabIndex = 30;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "groupBox7";
+            this.groupBox7.Text = "Options";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label19.Location = new System.Drawing.Point(5, 36);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(113, 20);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "NOrder Closed";
+            // 
+            // labelNOrderClosedData
+            // 
+            this.labelNOrderClosedData.AutoSize = true;
+            this.labelNOrderClosedData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelNOrderClosedData.Location = new System.Drawing.Point(158, 36);
+            this.labelNOrderClosedData.Name = "labelNOrderClosedData";
+            this.labelNOrderClosedData.Size = new System.Drawing.Size(46, 20);
+            this.labelNOrderClosedData.TabIndex = 11;
+            this.labelNOrderClosedData.Text = "show";
             // 
             // BWMP_db
             // 
@@ -709,13 +1102,31 @@
             this.tabPage1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSfaRecStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNOrderStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSfaSentStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSfaCreatedStatus)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDilStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFtStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSeqStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLcsStatus)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -729,8 +1140,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelVesselId;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Label labelStatus;
-        private System.Windows.Forms.ComboBox comboboxVesselStatus;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonDelete;
@@ -779,5 +1188,40 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.PictureBox pbSfaRecStatus;
+        private System.Windows.Forms.PictureBox pbNOrderStatus;
+        private System.Windows.Forms.PictureBox pbSfaSentStatus;
+        private System.Windows.Forms.PictureBox pbSfaCreatedStatus;
+        private System.Windows.Forms.PictureBox pbDilStatus;
+        private System.Windows.Forms.PictureBox pbFtStatus;
+        private System.Windows.Forms.PictureBox pbSeqStatus;
+        private System.Windows.Forms.Label labelCalc;
+        private System.Windows.Forms.Label labelHmax;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelAppStageData;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelPoCheckedData;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelVesselStatusData;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelSharePointData;
+        private System.Windows.Forms.Label labelCertificateData;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.TextBox textBoxNotesData;
+        private System.Windows.Forms.Label labelNOrderClosedData;
+        private System.Windows.Forms.Label label19;
     }
 }

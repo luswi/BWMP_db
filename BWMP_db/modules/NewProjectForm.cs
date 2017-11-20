@@ -38,13 +38,21 @@ namespace BWMP_db.modules
                 v.VesselName = textboxVesselName.Text;
                 v.VesselStatus = comboboxStatus.Text;
                 v.VesselLcs = comboboxVesselLcs.Text;
-                //v.VesselMethodSeq = comboboxVesselMethodSeq.Text;
-                //v.VesselMethodFt = comboboxVesselMethodFt.Text;
-                //v.VesselMethodDil = comboboxVesselMethodDil.Text;
-                //v.SfaCreated = comboboxSfaCreated.Text;
-                //v.SfaSent = comboboxSfaSent.Text;
-                //v.NOrder = comboboxNOrder.Text;
-                //v.SfaRec = comboboxSfaRec.Text;
+                v.VesselMethodSeq = comboboxVesselMethodSeq.Text;
+                v.VesselMethodFt = comboboxVesselMethodFt.Text;
+                v.VesselMethodDil = comboboxVesselMethodDil.Text;
+                v.SfaCreated = comboboxSfaCreated.Text;
+                v.SfaSent = comboboxSfaSent.Text;
+                v.NOrder = comboboxNOrder.Text;
+                v.SfaRec = comboboxSfaRec.Text;
+                v.AppStage = comboboxApprovalStage.Text;
+                v.Certificate = comboboxCertificate.Text;
+                v.SharePoint = comboboxSharePoint.Text;
+                v.Hmax = double.Parse(comboboxHmax.Text);
+                v.Notes = textboxNotes.Text;
+                v.PoChecked = comboboxPoChecked.Text;
+                v.NOrderClosed = comboboxNOrderClosed.Text;
+                
 
                 // Inserting data into database.
                 bool success = v.Insert(v);
@@ -78,7 +86,10 @@ namespace BWMP_db.modules
 
         private void NewProjectForm_Load(object sender, EventArgs e)
         {
-
+            // Load preselected Hmax 4.5 (one method)
+            comboboxHmax.SelectedIndex = 0;
         }
+
+
     }
 }
