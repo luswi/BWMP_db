@@ -397,7 +397,6 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.labelHmax);
-            this.tabPage1.Controls.Add(this.labelCalc);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.groupBox3);
@@ -422,7 +421,7 @@
             // labelCalc
             // 
             this.labelCalc.AutoSize = true;
-            this.labelCalc.Location = new System.Drawing.Point(168, 371);
+            this.labelCalc.Location = new System.Drawing.Point(372, 43);
             this.labelCalc.Name = "labelCalc";
             this.labelCalc.Size = new System.Drawing.Size(35, 13);
             this.labelCalc.TabIndex = 33;
@@ -770,6 +769,7 @@
             // groupBox11
             // 
             this.groupBox11.Controls.Add(this.label18);
+            this.groupBox11.Controls.Add(this.labelCalc);
             this.groupBox11.Controls.Add(this.label17);
             this.groupBox11.Controls.Add(this.label16);
             this.groupBox11.Controls.Add(this.label15);

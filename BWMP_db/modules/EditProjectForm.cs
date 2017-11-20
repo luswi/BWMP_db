@@ -17,9 +17,6 @@ namespace BWMP_db.modules
             InitializeComponent();
         }
 
-        private void EditProjectForm_Load(object sender, EventArgs e)
-        {
-            
-        }
+
     }
 }

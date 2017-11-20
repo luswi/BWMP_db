@@ -52,7 +52,8 @@ namespace BWMP_db.modules
                 v.Notes = textboxNotes.Text;
                 v.PoChecked = comboboxPoChecked.Text;
                 v.NOrderClosed = comboboxNOrderClosed.Text;
-                
+                v.Hadd = 0;
+                v.Hused = 0;
 
                 // Inserting data into database.
                 bool success = v.Insert(v);

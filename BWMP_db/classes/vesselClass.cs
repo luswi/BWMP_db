@@ -88,7 +88,7 @@ namespace BWMP_db.classes
             try
             {
                 // SQL Query.
-                string sql = "INSERT INTO data(VesselId, VesselName, VesselStatus, VesselLcs, VesselMethodSeq, VesselMethodFt, VesselMethodDil, SfaCreated, SfaSent, NOrder, SfaRec, AppStage, Certificate, SharePoint, Hmax, Notes, PoChecked, NOrderClosed) VALUES (@VesselId, @VesselName, @VesselStatus, @VesselLcs, @VesselMethodSeq, @VesselMethodFt, @VesselMethodDil, @SfaCreated, @SfaSent, @NOrder, @SfaRec, @AppStage, @Certificate, @SharePoint, @Hmax, @Notes, @PoChecked, @NOrderClosed)";
+                string sql = "INSERT INTO data(VesselId, VesselName, VesselStatus, VesselLcs, VesselMethodSeq, VesselMethodFt, VesselMethodDil, SfaCreated, SfaSent, NOrder, SfaRec, AppStage, Certificate, SharePoint, Hmax, Hadd, Hused, Notes, PoChecked, NOrderClosed) VALUES (@VesselId, @VesselName, @VesselStatus, @VesselLcs, @VesselMethodSeq, @VesselMethodFt, @VesselMethodDil, @SfaCreated, @SfaSent, @NOrder, @SfaRec, @AppStage, @Certificate, @SharePoint, @Hmax, @Hadd, @Hused, @Notes, @PoChecked, @NOrderClosed)";
                 //string sql = "INSERT INTO data(VesselId, VesselName, VesselStatus, VesselLcs) VALUES (@VesselId, @VesselName, @VesselStatus, @VesselLcs)";
                 // Creating cmd (combine sql and conn).
                 SqlCommand cmd = new SqlCommand(sql, conn);
@@ -108,6 +108,8 @@ namespace BWMP_db.classes
                 cmd.Parameters.AddWithValue("@Certificate", v.Certificate);
                 cmd.Parameters.AddWithValue("@SharePoint", v.SharePoint);
                 cmd.Parameters.AddWithValue("@Hmax", v.Hmax);
+                cmd.Parameters.AddWithValue("@Hadd", v.Hadd);
+                cmd.Parameters.AddWithValue("@Hused", v.Hused);
                 cmd.Parameters.AddWithValue("@Notes", v.Notes);
                 cmd.Parameters.AddWithValue("@PoChecked", v.PoChecked);
                 cmd.Parameters.AddWithValue("@NOrderClosed", v.NOrderClosed);

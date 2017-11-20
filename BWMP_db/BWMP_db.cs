@@ -55,7 +55,7 @@ namespace BWMP_db
             dataGridView1.Columns["AppStage"].Visible = false;
             dataGridView1.Columns["Certificate"].Visible = false;
             dataGridView1.Columns["SharePoint"].Visible = false;
-            //dataGridView1.Columns["Hmax"].Visible = false;
+            dataGridView1.Columns["Hmax"].Visible = false;
             dataGridView1.Columns["Hadd"].Visible = false;
             dataGridView1.Columns["Hused"].Visible = false;
             dataGridView1.Columns["Notes"].Visible = false;
@@ -132,8 +132,9 @@ namespace BWMP_db
 
             
                 double valueok = double.Parse(dataGridView1.Rows[rowIndex].Cells[15].Value.ToString());
-                double minus = 40.0;
-                double wynik = valueok - minus;
+                double minus = double.Parse(dataGridView1.Rows[rowIndex].Cells[17].Value.ToString());
+                double add = double.Parse(dataGridView1.Rows[rowIndex].Cells[16].Value.ToString());
+                double wynik = (valueok + add) - minus;
                 labelCalc.Text = wynik.ToString();
                 
             }
@@ -321,7 +322,9 @@ namespace BWMP_db
         private void buttonEditShow_Click(object sender, EventArgs e)
         {
             modules.EditProjectForm editProject = new modules.EditProjectForm();
-            editProject.textboxVesselId.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            editProject.textboxVesselIdEdit.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            editProject.textboxVesselNameEdit.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            editProject.comboboxVesselLcsEdit.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             editProject.ShowDialog();
         }
 
