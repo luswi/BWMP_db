@@ -33,7 +33,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelVesselId = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
@@ -55,7 +54,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.labelHmax = new System.Windows.Forms.Label();
-            this.labelCalc = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pbSfaRecStatus = new System.Windows.Forms.PictureBox();
             this.pbNOrderStatus = new System.Windows.Forms.PictureBox();
@@ -90,6 +88,7 @@
             this.textBoxNotesData = new System.Windows.Forms.TextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.labelCalc = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -106,6 +105,8 @@
             this.labelAppStageData = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.labelNOrderClosedData = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelPoCheckedData = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -114,8 +115,6 @@
             this.labelVesselStatusData = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.labelNOrderClosedData = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -177,19 +176,6 @@
             this.labelName.TabIndex = 3;
             this.labelName.Text = "Vessel Name";
             // 
-            // buttonAdd
-            // 
-            this.buttonAdd.BackColor = System.Drawing.Color.LimeGreen;
-            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(1024, 527);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(99, 46);
-            this.buttonAdd.TabIndex = 7;
-            this.buttonAdd.Text = "Add";
-            this.buttonAdd.UseVisualStyleBackColor = false;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
             // buttonUpdate
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -208,7 +194,7 @@
             this.buttonDelete.BackColor = System.Drawing.Color.Crimson;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonDelete.Location = new System.Drawing.Point(377, 19);
+            this.buttonDelete.Location = new System.Drawing.Point(1024, 521);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(99, 46);
             this.buttonDelete.TabIndex = 10;
@@ -309,7 +295,7 @@
             // 
             // buttonNPS
             // 
-            this.buttonNPS.Location = new System.Drawing.Point(257, 42);
+            this.buttonNPS.Location = new System.Drawing.Point(1084, 289);
             this.buttonNPS.Name = "buttonNPS";
             this.buttonNPS.Size = new System.Drawing.Size(75, 23);
             this.buttonNPS.TabIndex = 18;
@@ -332,22 +318,28 @@
             // 
             // buttonNew
             // 
-            this.buttonNew.Location = new System.Drawing.Point(43, 42);
+            this.buttonNew.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonNew.ForeColor = System.Drawing.Color.White;
+            this.buttonNew.Location = new System.Drawing.Point(10, 31);
             this.buttonNew.Name = "buttonNew";
-            this.buttonNew.Size = new System.Drawing.Size(75, 23);
+            this.buttonNew.Size = new System.Drawing.Size(113, 46);
             this.buttonNew.TabIndex = 20;
             this.buttonNew.Text = "New Project";
-            this.buttonNew.UseVisualStyleBackColor = true;
+            this.buttonNew.UseVisualStyleBackColor = false;
             this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
             // buttonEditShow
             // 
-            this.buttonEditShow.Location = new System.Drawing.Point(145, 42);
+            this.buttonEditShow.BackColor = System.Drawing.Color.SpringGreen;
+            this.buttonEditShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonEditShow.ForeColor = System.Drawing.Color.White;
+            this.buttonEditShow.Location = new System.Drawing.Point(129, 31);
             this.buttonEditShow.Name = "buttonEditShow";
-            this.buttonEditShow.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditShow.Size = new System.Drawing.Size(117, 46);
             this.buttonEditShow.TabIndex = 22;
             this.buttonEditShow.Text = "Edit / Show";
-            this.buttonEditShow.UseVisualStyleBackColor = true;
+            this.buttonEditShow.UseVisualStyleBackColor = false;
             this.buttonEditShow.Click += new System.EventHandler(this.buttonEditShow_Click);
             // 
             // pictureBox2
@@ -417,15 +409,6 @@
             this.labelHmax.Size = new System.Drawing.Size(35, 13);
             this.labelHmax.TabIndex = 34;
             this.labelHmax.Text = "label1";
-            // 
-            // labelCalc
-            // 
-            this.labelCalc.AutoSize = true;
-            this.labelCalc.Location = new System.Drawing.Point(372, 43);
-            this.labelCalc.Name = "labelCalc";
-            this.labelCalc.Size = new System.Drawing.Size(35, 13);
-            this.labelCalc.TabIndex = 33;
-            this.labelCalc.Text = "label1";
             // 
             // groupBox5
             // 
@@ -794,6 +777,15 @@
             this.label18.TabIndex = 16;
             this.label18.Text = "show";
             // 
+            // labelCalc
+            // 
+            this.labelCalc.AutoSize = true;
+            this.labelCalc.Location = new System.Drawing.Point(372, 43);
+            this.labelCalc.Name = "labelCalc";
+            this.labelCalc.Size = new System.Drawing.Size(35, 13);
+            this.labelCalc.TabIndex = 33;
+            this.labelCalc.Text = "label1";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -962,6 +954,26 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Invoice";
             // 
+            // labelNOrderClosedData
+            // 
+            this.labelNOrderClosedData.AutoSize = true;
+            this.labelNOrderClosedData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelNOrderClosedData.Location = new System.Drawing.Point(158, 36);
+            this.labelNOrderClosedData.Name = "labelNOrderClosedData";
+            this.labelNOrderClosedData.Size = new System.Drawing.Size(46, 20);
+            this.labelNOrderClosedData.TabIndex = 11;
+            this.labelNOrderClosedData.Text = "show";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label19.Location = new System.Drawing.Point(5, 36);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(113, 20);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "NOrder Closed";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -1037,34 +1049,12 @@
             // 
             this.groupBox7.Controls.Add(this.buttonNew);
             this.groupBox7.Controls.Add(this.buttonEditShow);
-            this.groupBox7.Controls.Add(this.buttonNPS);
-            this.groupBox7.Controls.Add(this.buttonDelete);
             this.groupBox7.Location = new System.Drawing.Point(440, 546);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(513, 100);
             this.groupBox7.TabIndex = 30;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Options";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label19.Location = new System.Drawing.Point(5, 36);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(113, 20);
-            this.label19.TabIndex = 10;
-            this.label19.Text = "NOrder Closed";
-            // 
-            // labelNOrderClosedData
-            // 
-            this.labelNOrderClosedData.AutoSize = true;
-            this.labelNOrderClosedData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelNOrderClosedData.Location = new System.Drawing.Point(158, 36);
-            this.labelNOrderClosedData.Name = "labelNOrderClosedData";
-            this.labelNOrderClosedData.Size = new System.Drawing.Size(46, 20);
-            this.labelNOrderClosedData.TabIndex = 11;
-            this.labelNOrderClosedData.Text = "show";
             // 
             // BWMP_db
             // 
@@ -1073,12 +1063,13 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.buttonNPS);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textboxMainId);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonUpdate);
-            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1140,7 +1131,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelVesselId;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonClear;

@@ -27,11 +27,7 @@ namespace BWMP_db
         // New Project //
         //=============//
 
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            
 
-        }
 
         //===============================//
         // Load data into data grid view //
@@ -283,7 +279,7 @@ namespace BWMP_db
 
         private void bWMPdbInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Version 1.3 Stable", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Version 1.7 Stable", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //
@@ -321,10 +317,46 @@ namespace BWMP_db
 
         private void buttonEditShow_Click(object sender, EventArgs e)
         {
+
+
+
+            // transfer data into edit form
             modules.EditProjectForm editProject = new modules.EditProjectForm();
             editProject.textboxVesselIdEdit.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             editProject.textboxVesselNameEdit.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            editProject.comboboxStatusEdit.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             editProject.comboboxVesselLcsEdit.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            editProject.comboboxVesselMethodSeqEdit.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            editProject.comboboxVesselMethodFtEdit.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            editProject.comboboxVesselMethodDilEdit.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            editProject.comboboxSfaCreatedEdit.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            editProject.comboboxSfaSentEdit.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+            editProject.comboboxNOrderEdit.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+            editProject.comboboxSfaRecEdit.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
+            editProject.comboboxPoCheckedEdit.Text = dataGridView1.CurrentRow.Cells[19].Value.ToString();
+            editProject.comboboxNOrderClosedEdit.Text = dataGridView1.CurrentRow.Cells[20].Value.ToString();
+            
+
+
+            editProject.comboboxApprovalStageEdit.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+            editProject.comboboxCertificateEdit.Text = dataGridView1.CurrentRow.Cells[13].Value.ToString();
+            editProject.comboboxSharePointEdit.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
+            editProject.textboxNotesEdit.Text = dataGridView1.CurrentRow.Cells[18].Value.ToString();
+
+            double hmax = double.Parse(dataGridView1.CurrentRow.Cells[15].Value.ToString());
+            double hused = double.Parse(dataGridView1.CurrentRow.Cells[17].Value.ToString());
+            double hrev = double.Parse(dataGridView1.CurrentRow.Cells[16].Value.ToString());
+            double hleft = (hmax + hrev) - hused;
+
+            editProject.comboboxHmaxEdit.Text = hmax.ToString();
+            editProject.comboboxHaddEdit.Text = hrev.ToString();
+            editProject.comboboxHusedEdit.Text = hused.ToString();
+            editProject.textboxHleftEdit.Text = hleft.ToString();
+
+
+
+
+
             editProject.ShowDialog();
         }
 
