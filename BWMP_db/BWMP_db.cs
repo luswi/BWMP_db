@@ -260,7 +260,7 @@ namespace BWMP_db
         }
 
         //
-        // When new add and close then refresh datagrid
+        // When new add and close then refresh datagrid.
         //
 
         private void BWMP_db_Activated(object sender, EventArgs e)
