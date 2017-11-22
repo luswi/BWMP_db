@@ -98,7 +98,18 @@ namespace BWMP_db
                 labelAppStageData.Text = dataGridView1.Rows[rowIndex].Cells[12].Value.ToString();
                 labelCertificateData.Text = dataGridView1.Rows[rowIndex].Cells[13].Value.ToString();
                 labelSharePointData.Text = dataGridView1.Rows[rowIndex].Cells[14].Value.ToString();
-                // here hmax....
+                // Hours for project
+                double hmax = double.Parse(dataGridView1.CurrentRow.Cells[15].Value.ToString());
+                double hused = double.Parse(dataGridView1.CurrentRow.Cells[17].Value.ToString());
+                double hrev = double.Parse(dataGridView1.CurrentRow.Cells[16].Value.ToString());
+                double hleft = (hmax + hrev) - hused;
+                labelHmaxData.Text = hmax.ToString();
+                labelHaddData.Text = hrev.ToString();
+                labelHusedData.Text = hused.ToString();
+                labelHleftData.Text = hleft.ToString();
+
+
+
                 textBoxNotesData.Text = dataGridView1.Rows[rowIndex].Cells[18].Value.ToString();
                 labelPoCheckedData.Text = dataGridView1.Rows[rowIndex].Cells[19].Value.ToString();
                 labelNOrderClosedData.Text = dataGridView1.Rows[rowIndex].Cells[20].Value.ToString();
@@ -115,6 +126,7 @@ namespace BWMP_db
                 else { pbFtStatus.Image = Properties.Resources.yes; }
                 if (labelVesselMethodDilData.Text == "") { pbDilStatus.Image = Properties.Resources.no; }
                 else { pbDilStatus.Image = Properties.Resources.yes; }
+                //labelVesselMethodDil.ForeColor = System.Drawing.Color.Red;
 
                 // SFA / NOrder
                 if (labelSfaCreatedData.Text == "Yes" || labelSfaCreatedData.Text == "SC") { pbSfaCreatedStatus.Image = Properties.Resources.yes; }
@@ -127,11 +139,7 @@ namespace BWMP_db
                 else { pbSfaRecStatus.Image = Properties.Resources.no; }
 
             
-                double valueok = double.Parse(dataGridView1.Rows[rowIndex].Cells[15].Value.ToString());
-                double minus = double.Parse(dataGridView1.Rows[rowIndex].Cells[17].Value.ToString());
-                double add = double.Parse(dataGridView1.Rows[rowIndex].Cells[16].Value.ToString());
-                double wynik = (valueok + add) - minus;
-                labelCalc.Text = wynik.ToString();
+
                 
             }
             else
@@ -150,38 +158,7 @@ namespace BWMP_db
             Clear();
         }
 
-        //===============//
-        // Update button //
-        //===============//
 
-        private void buttonUpdate_Click(object sender, EventArgs e)
-        {
-            // Get data from texboxes.
-            // We need to convert from string to int using Parse.
-            v.MainId = int.Parse(textboxMainId.Text);
-            //v.VesselId = textboxVesselId.Text;
-            //v.VesselName = textboxVesselName.Text;
-            //v.VesselStatus = comboboxVesselStatus.Text;
-
-            // Update data in database.
-            bool success = v.Update(v);
-            if (success == true)
-            {
-                // Updated successfully.
-                MessageBox.Show("Data updated");
-                // Load data on data grid.
-                DataTable dt = v.Select();
-                dataGridView1.DataSource = dt;
-                Clear();
-            }
-            else
-            {
-                // Update failed.
-                MessageBox.Show("Update failed");
-            }
-
-
-        }
         //===============//
         // Delete button //
         //===============//
@@ -279,7 +256,7 @@ namespace BWMP_db
 
         private void bWMPdbInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Version 1.7 Stable", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Version 1.8 Stable", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //
@@ -296,9 +273,9 @@ namespace BWMP_db
             dataGridView1.DataSource = dt;
         }
 
-        //
-        // Open New Form
-        //
+        //===============//
+        // Open New Form //
+        //===============//
 
 
         private void buttonNew_Click(object sender, EventArgs e)
@@ -311,20 +288,25 @@ namespace BWMP_db
 
 
 
-        //
-        // Open Edit Form
-        //
+        //================//
+        // Open Edit Form //
+        //================//
 
         private void buttonEditShow_Click(object sender, EventArgs e)
         {
 
 
 
-            // transfer data into edit form
+            // Transfer data into edit form.
             modules.EditProjectForm editProject = new modules.EditProjectForm();
+
+            v.MainId = int.Parse(textboxMainId.Text);
+
+            editProject.textboxMainId.Text = v.MainId.ToString();
+
             editProject.textboxVesselIdEdit.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             editProject.textboxVesselNameEdit.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            editProject.comboboxStatusEdit.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            editProject.comboboxVesselStatusEdit.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             editProject.comboboxVesselLcsEdit.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             editProject.comboboxVesselMethodSeqEdit.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             editProject.comboboxVesselMethodFtEdit.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
@@ -360,6 +342,19 @@ namespace BWMP_db
             editProject.ShowDialog();
         }
 
+        private void label13_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void buttonSfa_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"c:\");
+        }
+
+        private void buttonOracle_Click(object sender, EventArgs e)
+        {
+            Process.Start("www.wp.pl");
+        }
     }
 }

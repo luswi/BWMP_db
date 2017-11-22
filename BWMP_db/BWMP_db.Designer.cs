@@ -33,13 +33,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelVesselId = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelSearch = new System.Windows.Forms.Label();
             this.textboxSearch = new System.Windows.Forms.TextBox();
-            this.textboxMainId = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +51,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.labelHmax = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pbSfaRecStatus = new System.Windows.Forms.PictureBox();
             this.pbNOrderStatus = new System.Windows.Forms.PictureBox();
@@ -87,14 +84,13 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.textBoxNotesData = new System.Windows.Forms.TextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.labelCalc = new System.Windows.Forms.Label();
+            this.labelHaddData = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.labelHmaxData = new System.Windows.Forms.Label();
+            this.labelHusedData = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.labelHleftData = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -115,6 +111,9 @@
             this.labelVesselStatusData = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.textboxMainId = new System.Windows.Forms.TextBox();
+            this.buttonSfa = new System.Windows.Forms.Button();
+            this.buttonOracle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -176,25 +175,12 @@
             this.labelName.TabIndex = 3;
             this.labelName.Text = "Vessel Name";
             // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(1024, 588);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(99, 46);
-            this.buttonUpdate.TabIndex = 8;
-            this.buttonUpdate.Text = "Update";
-            this.buttonUpdate.UseVisualStyleBackColor = false;
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
-            // 
             // buttonDelete
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.Crimson;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonDelete.Location = new System.Drawing.Point(1024, 521);
+            this.buttonDelete.Location = new System.Drawing.Point(252, 31);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(99, 46);
             this.buttonDelete.TabIndex = 10;
@@ -213,6 +199,7 @@
             this.buttonClear.TabIndex = 9;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Visible = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // dataGridView1
@@ -250,16 +237,6 @@
             this.textboxSearch.Size = new System.Drawing.Size(344, 26);
             this.textboxSearch.TabIndex = 13;
             this.textboxSearch.TextChanged += new System.EventHandler(this.textboxSearch_TextChanged);
-            // 
-            // textboxMainId
-            // 
-            this.textboxMainId.Enabled = false;
-            this.textboxMainId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textboxMainId.Location = new System.Drawing.Point(980, 449);
-            this.textboxMainId.Name = "textboxMainId";
-            this.textboxMainId.Size = new System.Drawing.Size(173, 26);
-            this.textboxMainId.TabIndex = 15;
-            this.textboxMainId.Visible = false;
             // 
             // menuStrip1
             // 
@@ -301,6 +278,7 @@
             this.buttonNPS.TabIndex = 18;
             this.buttonNPS.Text = "NPS";
             this.buttonNPS.UseVisualStyleBackColor = true;
+            this.buttonNPS.Visible = false;
             this.buttonNPS.Click += new System.EventHandler(this.buttonNPS_Click);
             // 
             // checkBox1
@@ -388,7 +366,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.labelHmax);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.groupBox3);
@@ -400,15 +377,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main Informations ->";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // labelHmax
-            // 
-            this.labelHmax.AutoSize = true;
-            this.labelHmax.Location = new System.Drawing.Point(13, 360);
-            this.labelHmax.Name = "labelHmax";
-            this.labelHmax.Size = new System.Drawing.Size(35, 13);
-            this.labelHmax.TabIndex = 34;
-            this.labelHmax.Text = "label1";
             // 
             // groupBox5
             // 
@@ -751,14 +719,13 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.label18);
-            this.groupBox11.Controls.Add(this.labelCalc);
+            this.groupBox11.Controls.Add(this.labelHaddData);
             this.groupBox11.Controls.Add(this.label17);
-            this.groupBox11.Controls.Add(this.label16);
-            this.groupBox11.Controls.Add(this.label15);
-            this.groupBox11.Controls.Add(this.label14);
+            this.groupBox11.Controls.Add(this.labelHmaxData);
+            this.groupBox11.Controls.Add(this.labelHusedData);
             this.groupBox11.Controls.Add(this.label13);
-            this.groupBox11.Controls.Add(this.label12);
+            this.groupBox11.Controls.Add(this.label15);
+            this.groupBox11.Controls.Add(this.labelHleftData);
             this.groupBox11.Controls.Add(this.label11);
             this.groupBox11.Location = new System.Drawing.Point(6, 99);
             this.groupBox11.Name = "groupBox11";
@@ -767,90 +734,82 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Time";
             // 
-            // label18
+            // labelHaddData
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label18.Location = new System.Drawing.Point(158, 76);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(46, 20);
-            this.label18.TabIndex = 16;
-            this.label18.Text = "show";
-            // 
-            // labelCalc
-            // 
-            this.labelCalc.AutoSize = true;
-            this.labelCalc.Location = new System.Drawing.Point(372, 43);
-            this.labelCalc.Name = "labelCalc";
-            this.labelCalc.Size = new System.Drawing.Size(35, 13);
-            this.labelCalc.TabIndex = 33;
-            this.labelCalc.Text = "label1";
+            this.labelHaddData.AutoSize = true;
+            this.labelHaddData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelHaddData.Location = new System.Drawing.Point(157, 36);
+            this.labelHaddData.Name = "labelHaddData";
+            this.labelHaddData.Size = new System.Drawing.Size(46, 20);
+            this.labelHaddData.TabIndex = 16;
+            this.labelHaddData.Text = "show";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label17.Location = new System.Drawing.Point(6, 76);
+            this.label17.Location = new System.Drawing.Point(5, 36);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(74, 20);
             this.label17.TabIndex = 15;
             this.label17.Text = "Time add";
             // 
-            // label16
+            // labelHmaxData
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label16.Location = new System.Drawing.Point(158, 56);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 20);
-            this.label16.TabIndex = 14;
-            this.label16.Text = "show";
+            this.labelHmaxData.AutoSize = true;
+            this.labelHmaxData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelHmaxData.Location = new System.Drawing.Point(157, 16);
+            this.labelHmaxData.Name = "labelHmaxData";
+            this.labelHmaxData.Size = new System.Drawing.Size(46, 20);
+            this.labelHmaxData.TabIndex = 14;
+            this.labelHmaxData.Text = "show";
             // 
-            // label15
+            // labelHusedData
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label15.Location = new System.Drawing.Point(6, 56);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(76, 20);
-            this.label15.TabIndex = 13;
-            this.label15.Text = "Time max";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label14.Location = new System.Drawing.Point(158, 36);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 20);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "show";
+            this.labelHusedData.AutoSize = true;
+            this.labelHusedData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelHusedData.Location = new System.Drawing.Point(157, 56);
+            this.labelHusedData.Name = "labelHusedData";
+            this.labelHusedData.Size = new System.Drawing.Size(46, 20);
+            this.labelHusedData.TabIndex = 12;
+            this.labelHusedData.Text = "show";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label13.Location = new System.Drawing.Point(5, 36);
+            this.label13.Location = new System.Drawing.Point(6, 56);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(82, 20);
             this.label13.TabIndex = 11;
             this.label13.Text = "Time used";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
-            // label12
+            // label15
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label12.Location = new System.Drawing.Point(158, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 20);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "show";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label15.Location = new System.Drawing.Point(5, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(76, 20);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "Time max";
+            // 
+            // labelHleftData
+            // 
+            this.labelHleftData.AutoSize = true;
+            this.labelHleftData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelHleftData.Location = new System.Drawing.Point(158, 76);
+            this.labelHleftData.Name = "labelHleftData";
+            this.labelHleftData.Size = new System.Drawing.Size(46, 20);
+            this.labelHleftData.TabIndex = 10;
+            this.labelHleftData.Text = "show";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.Location = new System.Drawing.Point(6, 16);
+            this.label11.Location = new System.Drawing.Point(6, 76);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 20);
             this.label11.TabIndex = 9;
@@ -1049,6 +1008,7 @@
             // 
             this.groupBox7.Controls.Add(this.buttonNew);
             this.groupBox7.Controls.Add(this.buttonEditShow);
+            this.groupBox7.Controls.Add(this.buttonDelete);
             this.groupBox7.Location = new System.Drawing.Point(440, 546);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(513, 100);
@@ -1056,20 +1016,50 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Options";
             // 
+            // textboxMainId
+            // 
+            this.textboxMainId.Enabled = false;
+            this.textboxMainId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textboxMainId.Location = new System.Drawing.Point(980, 449);
+            this.textboxMainId.Name = "textboxMainId";
+            this.textboxMainId.Size = new System.Drawing.Size(173, 26);
+            this.textboxMainId.TabIndex = 15;
+            this.textboxMainId.Visible = false;
+            // 
+            // buttonSfa
+            // 
+            this.buttonSfa.Location = new System.Drawing.Point(1004, 537);
+            this.buttonSfa.Name = "buttonSfa";
+            this.buttonSfa.Size = new System.Drawing.Size(75, 23);
+            this.buttonSfa.TabIndex = 31;
+            this.buttonSfa.Text = "Open SFA Folder";
+            this.buttonSfa.UseVisualStyleBackColor = true;
+            this.buttonSfa.Click += new System.EventHandler(this.buttonSfa_Click);
+            // 
+            // buttonOracle
+            // 
+            this.buttonOracle.Location = new System.Drawing.Point(1004, 577);
+            this.buttonOracle.Name = "buttonOracle";
+            this.buttonOracle.Size = new System.Drawing.Size(75, 23);
+            this.buttonOracle.TabIndex = 32;
+            this.buttonOracle.Text = "Oracle";
+            this.buttonOracle.UseVisualStyleBackColor = true;
+            this.buttonOracle.Click += new System.EventHandler(this.buttonOracle_Click);
+            // 
             // BWMP_db
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.buttonOracle);
+            this.Controls.Add(this.buttonSfa);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.buttonNPS);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textboxMainId);
             this.Controls.Add(this.buttonClear);
-            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1131,13 +1121,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelVesselId;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.TextBox textboxSearch;
-        private System.Windows.Forms.TextBox textboxMainId;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
@@ -1185,8 +1173,6 @@
         private System.Windows.Forms.PictureBox pbDilStatus;
         private System.Windows.Forms.PictureBox pbFtStatus;
         private System.Windows.Forms.PictureBox pbSeqStatus;
-        private System.Windows.Forms.Label labelCalc;
-        private System.Windows.Forms.Label labelHmax;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox10;
@@ -1201,17 +1187,20 @@
         private System.Windows.Forms.Label labelSharePointData;
         private System.Windows.Forms.Label labelCertificateData;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label labelHleftData;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label labelHaddData;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label labelHmaxData;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelHusedData;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.TextBox textBoxNotesData;
         private System.Windows.Forms.Label labelNOrderClosedData;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textboxMainId;
+        private System.Windows.Forms.Button buttonSfa;
+        private System.Windows.Forms.Button buttonOracle;
     }
 }

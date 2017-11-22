@@ -84,10 +84,11 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.comboboxStatusEdit = new System.Windows.Forms.ComboBox();
+            this.comboboxVesselStatusEdit = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonEditOK = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.textboxMainId = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -121,6 +122,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textboxMainId);
             this.tabPage1.Controls.Add(this.pictureBox4);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox2);
@@ -728,7 +730,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.comboboxStatusEdit);
+            this.groupBox7.Controls.Add(this.comboboxVesselStatusEdit);
             this.groupBox7.Controls.Add(this.label20);
             this.groupBox7.Location = new System.Drawing.Point(3, 6);
             this.groupBox7.Name = "groupBox7";
@@ -737,19 +739,19 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Status";
             // 
-            // comboboxStatusEdit
+            // comboboxVesselStatusEdit
             // 
-            this.comboboxStatusEdit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboboxStatusEdit.FormattingEnabled = true;
-            this.comboboxStatusEdit.Items.AddRange(new object[] {
+            this.comboboxVesselStatusEdit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxVesselStatusEdit.FormattingEnabled = true;
+            this.comboboxVesselStatusEdit.Items.AddRange(new object[] {
             "Open",
             "Close",
             "OnHold",
             "Piraeus"});
-            this.comboboxStatusEdit.Location = new System.Drawing.Point(136, 22);
-            this.comboboxStatusEdit.Name = "comboboxStatusEdit";
-            this.comboboxStatusEdit.Size = new System.Drawing.Size(223, 28);
-            this.comboboxStatusEdit.TabIndex = 9;
+            this.comboboxVesselStatusEdit.Location = new System.Drawing.Point(136, 22);
+            this.comboboxVesselStatusEdit.Name = "comboboxVesselStatusEdit";
+            this.comboboxVesselStatusEdit.Size = new System.Drawing.Size(223, 28);
+            this.comboboxVesselStatusEdit.TabIndex = 9;
             // 
             // label20
             // 
@@ -760,14 +762,15 @@
             this.label20.TabIndex = 8;
             this.label20.Text = "Job Status";
             // 
-            // button1
+            // buttonEditOK
             // 
-            this.button1.Location = new System.Drawing.Point(234, 730);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonEditOK.Location = new System.Drawing.Point(234, 730);
+            this.buttonEditOK.Name = "buttonEditOK";
+            this.buttonEditOK.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditOK.TabIndex = 2;
+            this.buttonEditOK.Text = "OK";
+            this.buttonEditOK.UseVisualStyleBackColor = true;
+            this.buttonEditOK.Click += new System.EventHandler(this.buttonEditOK_Click);
             // 
             // button2
             // 
@@ -778,18 +781,27 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // textboxMainId
+            // 
+            this.textboxMainId.Location = new System.Drawing.Point(18, 569);
+            this.textboxMainId.Name = "textboxMainId";
+            this.textboxMainId.Size = new System.Drawing.Size(223, 26);
+            this.textboxMainId.TabIndex = 4;
+            this.textboxMainId.Visible = false;
+            // 
             // EditProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 765);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonEditOK);
             this.Controls.Add(this.tabControl1);
             this.Name = "EditProjectForm";
             this.Text = "EditProjectForm";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -838,7 +850,7 @@
         public System.Windows.Forms.ComboBox comboboxVesselLcsEdit;
         public System.Windows.Forms.TextBox textboxVesselIdEdit;
         public System.Windows.Forms.TextBox textboxVesselNameEdit;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonEditOK;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -874,6 +886,7 @@
         public System.Windows.Forms.TextBox textboxNotesEdit;
         public System.Windows.Forms.ComboBox comboboxPoCheckedEdit;
         public System.Windows.Forms.ComboBox comboboxNOrderClosedEdit;
-        public System.Windows.Forms.ComboBox comboboxStatusEdit;
+        public System.Windows.Forms.ComboBox comboboxVesselStatusEdit;
+        public System.Windows.Forms.TextBox textboxMainId;
     }
 }

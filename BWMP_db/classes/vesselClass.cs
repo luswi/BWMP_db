@@ -148,13 +148,35 @@ namespace BWMP_db.classes
             try
             {
                 // SQL Query.
-                string sql = "UPDATE data SET VesselId=@VesselId, VesselName=@VesselName, VesselStatus=@VesselStatus WHERE MainId=@MainId";
+                //string sql = "UPDATE data SET VesselId=@VesselId, VesselName=@VesselName WHERE MainId=@MainId";
+                string sql = "UPDATE data SET VesselId=@VesselId, VesselName=@VesselName, VesselStatus=@VesselStatus, VesselLcs=@VesselLcs, VesselMethodSeq=@VesselMethodSeq, VesselMethodFt=@VesselMethodFt, VesselMethodDil=@VesselMethodDil, SfaCreated=@SfaCreated, SfaSent=@SfaSent, NOrder=@NOrder, SfaRec=@SfaRec, AppStage=@AppStage, Certificate=@Certificate, SharePoint=@SharePoint, Hmax=@Hmax, Hadd=@Hadd, Hused=@Hused, Notes=@Notes, PoChecked=@PoChecked, NOrderClosed=@NOrderClosed WHERE MainId=@MainId";
+                
                 // Creating SQL command.
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 // Create parameters to add data.
                 cmd.Parameters.AddWithValue("@VesselId", v.VesselId);
                 cmd.Parameters.AddWithValue("@VesselName", v.VesselName);
                 cmd.Parameters.AddWithValue("@VesselStatus", v.VesselStatus);
+                cmd.Parameters.AddWithValue("@VesselLcs", v.VesselLcs);
+                cmd.Parameters.AddWithValue("@VesselMethodSeq", v.VesselMethodSeq);
+                cmd.Parameters.AddWithValue("@VesselMethodFt", v.VesselMethodFt);
+                cmd.Parameters.AddWithValue("@VesselMethodDil", v.VesselMethodDil);
+                cmd.Parameters.AddWithValue("@SfaCreated", v.SfaCreated);
+                cmd.Parameters.AddWithValue("@SfaSent", SfaSent);
+                cmd.Parameters.AddWithValue("@NOrder", v.NOrder);
+                cmd.Parameters.AddWithValue("@SfaRec", v.SfaRec);
+                cmd.Parameters.AddWithValue("@AppStage", v.AppStage);
+                cmd.Parameters.AddWithValue("@Certificate", v.Certificate);
+                cmd.Parameters.AddWithValue("@SharePoint", v.SharePoint);
+                cmd.Parameters.AddWithValue("@Hmax", v.Hmax);
+                cmd.Parameters.AddWithValue("@Hadd", v.Hadd);
+                cmd.Parameters.AddWithValue("@Hused", v.Hused);
+                cmd.Parameters.AddWithValue("@Notes", v.Notes);
+                cmd.Parameters.AddWithValue("@PoChecked", v.PoChecked);
+                cmd.Parameters.AddWithValue("@NOrderClosed", v.NOrderClosed);
+                             
+                 
+
                 cmd.Parameters.AddWithValue("@MainId", v.MainId);
                 // Open database connection.
                 conn.Open();
