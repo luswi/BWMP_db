@@ -233,7 +233,7 @@ namespace BWMP_db
         {
             if (checkBox1.Checked)
             {
-                //get value from textbox
+                //get value from textbox.
                 //string keyword = textboxSearch.Text;
 
                 SqlConnection conn = new SqlConnection(myconnstrng);
