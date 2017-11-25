@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewProjectForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboboxNOrder = new System.Windows.Forms.ComboBox();
             this.comboboxSfaRec = new System.Windows.Forms.ComboBox();
@@ -56,6 +57,7 @@
             this.textboxVesselId = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textboxNotes = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -81,7 +83,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.newProject = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -117,6 +119,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -127,6 +130,15 @@
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Main Informations ->";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(403, 342);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -390,6 +402,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.groupBox4);
@@ -400,6 +413,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Approval Process ->";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(450, 149);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -670,7 +692,7 @@
             // 
             // newProject
             // 
-            this.newProject.Location = new System.Drawing.Point(195, 617);
+            this.newProject.Location = new System.Drawing.Point(362, 617);
             this.newProject.Name = "newProject";
             this.newProject.Size = new System.Drawing.Size(75, 23);
             this.newProject.TabIndex = 1;
@@ -678,24 +700,26 @@
             this.newProject.UseVisualStyleBackColor = true;
             this.newProject.Click += new System.EventHandler(this.newProject_Click);
             // 
-            // button2
+            // buttonClose
             // 
-            this.button2.Location = new System.Drawing.Point(307, 617);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonClose.Location = new System.Drawing.Point(443, 617);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonClose.TabIndex = 2;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.button2_Click);
             // 
             // NewProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 663);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.newProject);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "NewProjectForm";
             this.Text = "New BWMP";
@@ -761,7 +785,7 @@
         private System.Windows.Forms.ComboBox comboboxVesselMethodFt;
         private System.Windows.Forms.ComboBox comboboxVesselMethodSeq;
         private System.Windows.Forms.Button newProject;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.ComboBox comboboxStatus;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -784,5 +808,7 @@
         private System.Windows.Forms.ComboBox comboboxNOrderClosed;
         private System.Windows.Forms.ComboBox comboboxPoChecked;
         private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -54,12 +54,12 @@ namespace BWMP_db.modules
             if (success == true)
             {
                 // Updated successfully.
-                MessageBox.Show("Data updated");
+                //MessageBox.Show("Data updated");
                 // Load data on data grid.
-                
+
                 //DataTable dt = v.Select();
                 //dataGridView1.DataSource = dt;
-                //Clear();
+                Close();
             }
             else
             {
@@ -67,6 +67,11 @@ namespace BWMP_db.modules
                 MessageBox.Show("Update failed");
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

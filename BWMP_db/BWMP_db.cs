@@ -167,16 +167,8 @@ namespace BWMP_db
                 if (labelCertificateData.Text == "Yes" || labelCertificateData.Text == "SC") { pbCertificateStatus.Image = Properties.Resources.yes; }
                 else { pbCertificateStatus.Image = Properties.Resources.no; }
 
-                string SPcheck = labelSharePointData.Text;
-                switch (SPcheck)
-                {
-                    case "Update!":
-                        labelSharePointData.BackColor = System.Drawing.Color.Orange;
-                        break;
-                    case "OK":
-                        labelSharePointData.BackColor = System.Drawing.Color.Green;
-                        break;
-                }
+                if (labelSharePointData.Text == "Update!") { pbSharePointStatus.Image = Properties.Resources.no; }
+                else { pbSharePointStatus.Image = Properties.Resources.yes; }
 
                 // Invoice
                 if(labelPoCheckedData.Text == "Yes") { pbPoChechedStatus.Image = Properties.Resources.yes; }
@@ -185,7 +177,23 @@ namespace BWMP_db
                 else { pbNOrderClosedStatus.Image = Properties.Resources.no; }
 
                 // Status
-
+                string VesselStatuscheck = labelVesselStatusData.Text;
+                switch (VesselStatuscheck)
+                {
+                    case "Open":
+                        labelVesselStatusData.BackColor = System.Drawing.Color.CornflowerBlue;
+                        break;
+                    case "Closed":
+                        labelVesselStatusData.BackColor = System.Drawing.Color.Green;
+                        break;
+                    case "OnHold":
+                        labelVesselStatusData.BackColor = System.Drawing.Color.Orange;
+                        break;
+                    case "Piraeus":
+                        labelVesselStatusData.BackColor = System.Drawing.Color.Green;
+                        break;
+                    
+                }
                 //Open
                 //Close
                 //OnHold
@@ -214,33 +222,39 @@ namespace BWMP_db
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            // Get MainId.
-            v.MainId = Convert.ToInt32(textboxMainId.Text);
-            bool isSuccess = v.Delete(v);
-            if (isSuccess == true)
+            if (MessageBox.Show("Do you want to delete project ?", "Delete?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                // If successfully deleted.
-                MessageBox.Show("Data deleted");
-                // Refresh data.
-              
-                //DataTable dt = v.Select();
-                //dataGridView1.DataSource = dt;
-                //Clear();
+                // Get MainId.
+                v.MainId = Convert.ToInt32(textboxMainId.Text);
+                bool isSuccess = v.Delete(v);
+                if (isSuccess == true)
+                {
+                    // If successfully deleted.
+                    MessageBox.Show("Data deleted");
+                    // Refresh data.
 
-                string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
-                SqlConnection conn = new SqlConnection(myconnstrng);
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open' OR VesselStatus Like 'OnHold'", conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                dataGridView1.DataSource = dt;
+                    //DataTable dt = v.Select();
+                    //dataGridView1.DataSource = dt;
+                    //Clear();
+
+                    string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
+                    SqlConnection conn = new SqlConnection(myconnstrng);
+                    SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open' OR VesselStatus Like 'OnHold'", conn);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
 
 
+                }
+                else
+                {
+                    // If failed.
+                    MessageBox.Show("Something goes wrong");
+                }
             }
-            else
-            {
-                // If failed.
-                MessageBox.Show("Something goes wrong");
-            }
+
+
+            
         }
 
 

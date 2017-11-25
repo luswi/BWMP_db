@@ -60,7 +60,7 @@ namespace BWMP_db.modules
                 if (success == true)
                 {
                     // Successfully inserted into database.
-                    MessageBox.Show("New BWMP succesfully inserted", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("New BWMP succesfully inserted", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                     
                     
@@ -91,6 +91,9 @@ namespace BWMP_db.modules
             comboboxHmax.SelectedIndex = 0;
         }
 
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

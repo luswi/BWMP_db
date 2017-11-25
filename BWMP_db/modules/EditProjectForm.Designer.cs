@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProjectForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textboxMainId = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboboxSfaRecEdit = new System.Windows.Forms.ComboBox();
@@ -56,6 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textboxNotesEdit = new System.Windows.Forms.TextBox();
@@ -87,8 +90,7 @@
             this.comboboxVesselStatusEdit = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.buttonEditOK = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textboxMainId = new System.Windows.Forms.TextBox();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -122,6 +124,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.textboxMainId);
             this.tabPage1.Controls.Add(this.pictureBox4);
             this.tabPage1.Controls.Add(this.groupBox3);
@@ -134,6 +137,23 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main Informations ->";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(403, 340);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textboxMainId
+            // 
+            this.textboxMainId.Location = new System.Drawing.Point(18, 569);
+            this.textboxMainId.Name = "textboxMainId";
+            this.textboxMainId.Size = new System.Drawing.Size(223, 26);
+            this.textboxMainId.TabIndex = 4;
+            this.textboxMainId.Visible = false;
             // 
             // pictureBox4
             // 
@@ -397,6 +417,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.pictureBox3);
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.groupBox4);
@@ -407,6 +428,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Approval Process ->";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(395, 130);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -764,7 +794,7 @@
             // 
             // buttonEditOK
             // 
-            this.buttonEditOK.Location = new System.Drawing.Point(234, 730);
+            this.buttonEditOK.Location = new System.Drawing.Point(362, 721);
             this.buttonEditOK.Name = "buttonEditOK";
             this.buttonEditOK.Size = new System.Drawing.Size(75, 23);
             this.buttonEditOK.TabIndex = 2;
@@ -772,31 +802,27 @@
             this.buttonEditOK.UseVisualStyleBackColor = true;
             this.buttonEditOK.Click += new System.EventHandler(this.buttonEditOK_Click);
             // 
-            // button2
+            // buttonClose
             // 
-            this.button2.Location = new System.Drawing.Point(341, 730);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textboxMainId
-            // 
-            this.textboxMainId.Location = new System.Drawing.Point(18, 569);
-            this.textboxMainId.Name = "textboxMainId";
-            this.textboxMainId.Size = new System.Drawing.Size(223, 26);
-            this.textboxMainId.TabIndex = 4;
-            this.textboxMainId.Visible = false;
+            this.buttonClose.Location = new System.Drawing.Point(443, 721);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonClose.TabIndex = 3;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.button2_Click);
             // 
             // EditProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 765);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonEditOK);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "EditProjectForm";
             this.Text = "EditProjectForm";
             this.tabControl1.ResumeLayout(false);
@@ -851,7 +877,7 @@
         public System.Windows.Forms.TextBox textboxVesselIdEdit;
         public System.Windows.Forms.TextBox textboxVesselNameEdit;
         private System.Windows.Forms.Button buttonEditOK;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -888,5 +914,7 @@
         public System.Windows.Forms.ComboBox comboboxNOrderClosedEdit;
         public System.Windows.Forms.ComboBox comboboxVesselStatusEdit;
         public System.Windows.Forms.TextBox textboxMainId;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }

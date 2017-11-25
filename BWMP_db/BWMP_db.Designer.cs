@@ -201,7 +201,7 @@
             this.buttonClear.BackColor = System.Drawing.Color.Gold;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonClear.ForeColor = System.Drawing.Color.White;
-            this.buttonClear.Location = new System.Drawing.Point(1060, 357);
+            this.buttonClear.Location = new System.Drawing.Point(1054, 357);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(99, 46);
             this.buttonClear.TabIndex = 9;
@@ -1060,7 +1060,7 @@
             // 
             // pbCertificateStatus
             // 
-            this.pbCertificateStatus.Location = new System.Drawing.Point(210, 36);
+            this.pbCertificateStatus.Location = new System.Drawing.Point(247, 36);
             this.pbCertificateStatus.Name = "pbCertificateStatus";
             this.pbCertificateStatus.Size = new System.Drawing.Size(20, 20);
             this.pbCertificateStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1087,7 +1087,7 @@
             // 
             // pbSharePointStatus
             // 
-            this.pbSharePointStatus.Location = new System.Drawing.Point(210, 56);
+            this.pbSharePointStatus.Location = new System.Drawing.Point(247, 56);
             this.pbSharePointStatus.Name = "pbSharePointStatus";
             this.pbSharePointStatus.Size = new System.Drawing.Size(20, 20);
             this.pbSharePointStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1102,12 +1102,12 @@
             this.Controls.Add(this.buttonOracle);
             this.Controls.Add(this.buttonSfa);
             this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.buttonNPS);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textboxMainId);
-            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
