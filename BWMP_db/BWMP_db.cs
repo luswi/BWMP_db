@@ -127,6 +127,7 @@ namespace BWMP_db
                 if (labelVesselMethodDilData.Text == "") { pbDilStatus.Image = Properties.Resources.no; }
                 else { pbDilStatus.Image = Properties.Resources.yes; }
                 //labelVesselMethodDil.ForeColor = System.Drawing.Color.Red;
+                
 
                 // SFA / NOrder
                 if (labelSfaCreatedData.Text == "Yes" || labelSfaCreatedData.Text == "SC") { pbSfaCreatedStatus.Image = Properties.Resources.yes; }
@@ -138,9 +139,57 @@ namespace BWMP_db
                 if (labelSfaRecData.Text == "Yes" || labelSfaRecData.Text == "SC") { pbSfaRecStatus.Image = Properties.Resources.yes; }
                 else { pbSfaRecStatus.Image = Properties.Resources.no; }
 
-            
+                // BWMP Approval
 
-                
+                string AppStagecheck = labelAppStageData.Text;
+                switch (AppStagecheck)
+                {
+                    case "pre-check":
+                        labelAppStageData.BackColor = System.Drawing.Color.White;
+                        break;
+                    case "Started":
+                        labelAppStageData.BackColor = System.Drawing.Color.Orange;
+                        break;
+                    case "Approved":
+                        labelAppStageData.BackColor = System.Drawing.Color.Green;
+                        break;
+                    case "SC":
+                        labelAppStageData.BackColor = System.Drawing.Color.Green;
+                        break;
+                    case "Verification":
+                        labelAppStageData.BackColor = System.Drawing.Color.Yellow;
+                        break;
+                    case "Rev.":
+                        labelAppStageData.BackColor = System.Drawing.Color.Purple;
+                        break;
+                }
+
+                if (labelCertificateData.Text == "Yes" || labelCertificateData.Text == "SC") { pbCertificateStatus.Image = Properties.Resources.yes; }
+                else { pbCertificateStatus.Image = Properties.Resources.no; }
+
+                string SPcheck = labelSharePointData.Text;
+                switch (SPcheck)
+                {
+                    case "Update!":
+                        labelSharePointData.BackColor = System.Drawing.Color.Orange;
+                        break;
+                    case "OK":
+                        labelSharePointData.BackColor = System.Drawing.Color.Green;
+                        break;
+                }
+
+                // Invoice
+                if(labelPoCheckedData.Text == "Yes") { pbPoChechedStatus.Image = Properties.Resources.yes; }
+                else { pbPoChechedStatus.Image = Properties.Resources.no; }
+                if (labelNOrderClosedData.Text == "Yes") { pbNOrderClosedStatus.Image = Properties.Resources.yes; }
+                else { pbNOrderClosedStatus.Image = Properties.Resources.no; }
+
+                // Status
+
+                //Open
+                //Close
+                //OnHold
+                //Piraeus
             }
             else
             {

@@ -114,6 +114,10 @@
             this.textboxMainId = new System.Windows.Forms.TextBox();
             this.buttonSfa = new System.Windows.Forms.Button();
             this.buttonOracle = new System.Windows.Forms.Button();
+            this.pbCertificateStatus = new System.Windows.Forms.PictureBox();
+            this.pbPoChechedStatus = new System.Windows.Forms.PictureBox();
+            this.pbNOrderClosedStatus = new System.Windows.Forms.PictureBox();
+            this.pbSharePointStatus = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -143,6 +147,10 @@
             this.groupBox10.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCertificateStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPoChechedStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNOrderClosedStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSharePointStatus)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -817,6 +825,8 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.pbSharePointStatus);
+            this.groupBox8.Controls.Add(this.pbCertificateStatus);
             this.groupBox8.Controls.Add(this.label10);
             this.groupBox8.Controls.Add(this.labelSharePointData);
             this.groupBox8.Controls.Add(this.labelCertificateData);
@@ -902,6 +912,8 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.pbNOrderClosedStatus);
+            this.groupBox9.Controls.Add(this.pbPoChechedStatus);
             this.groupBox9.Controls.Add(this.labelNOrderClosedData);
             this.groupBox9.Controls.Add(this.label19);
             this.groupBox9.Controls.Add(this.label3);
@@ -1046,6 +1058,42 @@
             this.buttonOracle.UseVisualStyleBackColor = true;
             this.buttonOracle.Click += new System.EventHandler(this.buttonOracle_Click);
             // 
+            // pbCertificateStatus
+            // 
+            this.pbCertificateStatus.Location = new System.Drawing.Point(210, 36);
+            this.pbCertificateStatus.Name = "pbCertificateStatus";
+            this.pbCertificateStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbCertificateStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCertificateStatus.TabIndex = 14;
+            this.pbCertificateStatus.TabStop = false;
+            // 
+            // pbPoChechedStatus
+            // 
+            this.pbPoChechedStatus.Location = new System.Drawing.Point(210, 16);
+            this.pbPoChechedStatus.Name = "pbPoChechedStatus";
+            this.pbPoChechedStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbPoChechedStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPoChechedStatus.TabIndex = 12;
+            this.pbPoChechedStatus.TabStop = false;
+            // 
+            // pbNOrderClosedStatus
+            // 
+            this.pbNOrderClosedStatus.Location = new System.Drawing.Point(210, 36);
+            this.pbNOrderClosedStatus.Name = "pbNOrderClosedStatus";
+            this.pbNOrderClosedStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbNOrderClosedStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbNOrderClosedStatus.TabIndex = 13;
+            this.pbNOrderClosedStatus.TabStop = false;
+            // 
+            // pbSharePointStatus
+            // 
+            this.pbSharePointStatus.Location = new System.Drawing.Point(210, 56);
+            this.pbSharePointStatus.Name = "pbSharePointStatus";
+            this.pbSharePointStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbSharePointStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSharePointStatus.TabIndex = 15;
+            this.pbSharePointStatus.TabStop = false;
+            // 
             // BWMP_db
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1110,6 +1158,10 @@
             this.groupBox10.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbCertificateStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPoChechedStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNOrderClosedStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSharePointStatus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1202,5 +1254,9 @@
         private System.Windows.Forms.TextBox textboxMainId;
         private System.Windows.Forms.Button buttonSfa;
         private System.Windows.Forms.Button buttonOracle;
+        private System.Windows.Forms.PictureBox pbCertificateStatus;
+        private System.Windows.Forms.PictureBox pbPoChechedStatus;
+        private System.Windows.Forms.PictureBox pbNOrderClosedStatus;
+        private System.Windows.Forms.PictureBox pbSharePointStatus;
     }
 }
