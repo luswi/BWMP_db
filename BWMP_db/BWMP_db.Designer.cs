@@ -40,6 +40,12 @@
             this.textboxSearch = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sharePointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sFAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bWMPdbInformacjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonNPS = new System.Windows.Forms.Button();
@@ -93,6 +99,8 @@
             this.labelHleftData = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.pbSharePointStatus = new System.Windows.Forms.PictureBox();
+            this.pbCertificateStatus = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.labelSharePointData = new System.Windows.Forms.Label();
             this.labelCertificateData = new System.Windows.Forms.Label();
@@ -101,6 +109,8 @@
             this.labelAppStageData = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.pbNOrderClosedStatus = new System.Windows.Forms.PictureBox();
+            this.pbPoChechedStatus = new System.Windows.Forms.PictureBox();
             this.labelNOrderClosedData = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -114,10 +124,10 @@
             this.textboxMainId = new System.Windows.Forms.TextBox();
             this.buttonSfa = new System.Windows.Forms.Button();
             this.buttonOracle = new System.Windows.Forms.Button();
-            this.pbCertificateStatus = new System.Windows.Forms.PictureBox();
-            this.pbPoChechedStatus = new System.Windows.Forms.PictureBox();
-            this.pbNOrderClosedStatus = new System.Windows.Forms.PictureBox();
-            this.pbSharePointStatus = new System.Windows.Forms.PictureBox();
+            this.labelCountTotal = new System.Windows.Forms.Label();
+            this.labelCountOpen = new System.Windows.Forms.Label();
+            this.labelCountOnHold = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -141,16 +151,17 @@
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSharePointStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCertificateStatus)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNOrderClosedStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPoChechedStatus)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCertificateStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPoChechedStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNOrderClosedStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSharePointStatus)).BeginInit();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -201,7 +212,7 @@
             this.buttonClear.BackColor = System.Drawing.Color.Gold;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonClear.ForeColor = System.Drawing.Color.White;
-            this.buttonClear.Location = new System.Drawing.Point(1054, 357);
+            this.buttonClear.Location = new System.Drawing.Point(1060, 606);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(99, 46);
             this.buttonClear.TabIndex = 9;
@@ -250,6 +261,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.toolsToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -259,9 +271,52 @@
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newProjectToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.closeToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // newProjectToolStripMenuItem
+            // 
+            this.newProjectToolStripMenuItem.Name = "newProjectToolStripMenuItem";
+            this.newProjectToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.newProjectToolStripMenuItem.Text = "New Project";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.closeToolStripMenuItem.Text = "Close";
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sharePointToolStripMenuItem,
+            this.sFAToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // sharePointToolStripMenuItem
+            // 
+            this.sharePointToolStripMenuItem.Name = "sharePointToolStripMenuItem";
+            this.sharePointToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.sharePointToolStripMenuItem.Text = "SharePoint";
+            // 
+            // sFAToolStripMenuItem
+            // 
+            this.sFAToolStripMenuItem.Name = "sFAToolStripMenuItem";
+            this.sFAToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.sFAToolStripMenuItem.Text = "SFA";
             // 
             // helpToolStripMenuItem
             // 
@@ -280,7 +335,7 @@
             // 
             // buttonNPS
             // 
-            this.buttonNPS.Location = new System.Drawing.Point(1084, 289);
+            this.buttonNPS.Location = new System.Drawing.Point(1085, 577);
             this.buttonNPS.Name = "buttonNPS";
             this.buttonNPS.Size = new System.Drawing.Size(75, 23);
             this.buttonNPS.TabIndex = 18;
@@ -840,6 +895,24 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "BWMP Approval";
             // 
+            // pbSharePointStatus
+            // 
+            this.pbSharePointStatus.Location = new System.Drawing.Point(247, 56);
+            this.pbSharePointStatus.Name = "pbSharePointStatus";
+            this.pbSharePointStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbSharePointStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSharePointStatus.TabIndex = 15;
+            this.pbSharePointStatus.TabStop = false;
+            // 
+            // pbCertificateStatus
+            // 
+            this.pbCertificateStatus.Location = new System.Drawing.Point(247, 36);
+            this.pbCertificateStatus.Name = "pbCertificateStatus";
+            this.pbCertificateStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbCertificateStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCertificateStatus.TabIndex = 14;
+            this.pbCertificateStatus.TabStop = false;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -924,6 +997,24 @@
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Invoice";
+            // 
+            // pbNOrderClosedStatus
+            // 
+            this.pbNOrderClosedStatus.Location = new System.Drawing.Point(210, 36);
+            this.pbNOrderClosedStatus.Name = "pbNOrderClosedStatus";
+            this.pbNOrderClosedStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbNOrderClosedStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbNOrderClosedStatus.TabIndex = 13;
+            this.pbNOrderClosedStatus.TabStop = false;
+            // 
+            // pbPoChechedStatus
+            // 
+            this.pbPoChechedStatus.Location = new System.Drawing.Point(210, 16);
+            this.pbPoChechedStatus.Name = "pbPoChechedStatus";
+            this.pbPoChechedStatus.Size = new System.Drawing.Size(20, 20);
+            this.pbPoChechedStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPoChechedStatus.TabIndex = 12;
+            this.pbPoChechedStatus.TabStop = false;
             // 
             // labelNOrderClosedData
             // 
@@ -1046,6 +1137,7 @@
             this.buttonSfa.TabIndex = 31;
             this.buttonSfa.Text = "Open SFA Folder";
             this.buttonSfa.UseVisualStyleBackColor = true;
+            this.buttonSfa.Visible = false;
             this.buttonSfa.Click += new System.EventHandler(this.buttonSfa_Click);
             // 
             // buttonOracle
@@ -1056,49 +1148,54 @@
             this.buttonOracle.TabIndex = 32;
             this.buttonOracle.Text = "Oracle";
             this.buttonOracle.UseVisualStyleBackColor = true;
+            this.buttonOracle.Visible = false;
             this.buttonOracle.Click += new System.EventHandler(this.buttonOracle_Click);
             // 
-            // pbCertificateStatus
+            // labelCountTotal
             // 
-            this.pbCertificateStatus.Location = new System.Drawing.Point(247, 36);
-            this.pbCertificateStatus.Name = "pbCertificateStatus";
-            this.pbCertificateStatus.Size = new System.Drawing.Size(20, 20);
-            this.pbCertificateStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCertificateStatus.TabIndex = 14;
-            this.pbCertificateStatus.TabStop = false;
+            this.labelCountTotal.AutoSize = true;
+            this.labelCountTotal.Location = new System.Drawing.Point(6, 23);
+            this.labelCountTotal.Name = "labelCountTotal";
+            this.labelCountTotal.Size = new System.Drawing.Size(81, 13);
+            this.labelCountTotal.TabIndex = 33;
+            this.labelCountTotal.Text = "labelCountTotal";
             // 
-            // pbPoChechedStatus
+            // labelCountOpen
             // 
-            this.pbPoChechedStatus.Location = new System.Drawing.Point(210, 16);
-            this.pbPoChechedStatus.Name = "pbPoChechedStatus";
-            this.pbPoChechedStatus.Size = new System.Drawing.Size(20, 20);
-            this.pbPoChechedStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPoChechedStatus.TabIndex = 12;
-            this.pbPoChechedStatus.TabStop = false;
+            this.labelCountOpen.AutoSize = true;
+            this.labelCountOpen.Location = new System.Drawing.Point(6, 43);
+            this.labelCountOpen.Name = "labelCountOpen";
+            this.labelCountOpen.Size = new System.Drawing.Size(83, 13);
+            this.labelCountOpen.TabIndex = 34;
+            this.labelCountOpen.Text = "labelCountOpen";
             // 
-            // pbNOrderClosedStatus
+            // labelCountOnHold
             // 
-            this.pbNOrderClosedStatus.Location = new System.Drawing.Point(210, 36);
-            this.pbNOrderClosedStatus.Name = "pbNOrderClosedStatus";
-            this.pbNOrderClosedStatus.Size = new System.Drawing.Size(20, 20);
-            this.pbNOrderClosedStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbNOrderClosedStatus.TabIndex = 13;
-            this.pbNOrderClosedStatus.TabStop = false;
+            this.labelCountOnHold.AutoSize = true;
+            this.labelCountOnHold.Location = new System.Drawing.Point(6, 65);
+            this.labelCountOnHold.Name = "labelCountOnHold";
+            this.labelCountOnHold.Size = new System.Drawing.Size(93, 13);
+            this.labelCountOnHold.TabIndex = 35;
+            this.labelCountOnHold.Text = "labelCountOnHold";
             // 
-            // pbSharePointStatus
+            // groupBox13
             // 
-            this.pbSharePointStatus.Location = new System.Drawing.Point(247, 56);
-            this.pbSharePointStatus.Name = "pbSharePointStatus";
-            this.pbSharePointStatus.Size = new System.Drawing.Size(20, 20);
-            this.pbSharePointStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbSharePointStatus.TabIndex = 15;
-            this.pbSharePointStatus.TabStop = false;
+            this.groupBox13.Controls.Add(this.labelCountOnHold);
+            this.groupBox13.Controls.Add(this.labelCountTotal);
+            this.groupBox13.Controls.Add(this.labelCountOpen);
+            this.groupBox13.Location = new System.Drawing.Point(960, 256);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(212, 146);
+            this.groupBox13.TabIndex = 36;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "BWMP Summary";
             // 
             // BWMP_db
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.groupBox13);
             this.Controls.Add(this.buttonOracle);
             this.Controls.Add(this.buttonSfa);
             this.Controls.Add(this.groupBox7);
@@ -1150,18 +1247,20 @@
             this.groupBox11.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSharePointStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCertificateStatus)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNOrderClosedStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPoChechedStatus)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbCertificateStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPoChechedStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNOrderClosedStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSharePointStatus)).EndInit();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1180,10 +1279,8 @@
         private System.Windows.Forms.TextBox textboxSearch;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Button buttonNPS;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ToolStripMenuItem bWMPdbInformacjeToolStripMenuItem;
         private System.Windows.Forms.Button buttonNew;
         private System.Windows.Forms.Button buttonEditShow;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1258,5 +1355,17 @@
         private System.Windows.Forms.PictureBox pbPoChechedStatus;
         private System.Windows.Forms.PictureBox pbNOrderClosedStatus;
         private System.Windows.Forms.PictureBox pbSharePointStatus;
+        private System.Windows.Forms.Label labelCountTotal;
+        private System.Windows.Forms.Label labelCountOpen;
+        private System.Windows.Forms.Label labelCountOnHold;
+        private System.Windows.Forms.ToolStripMenuItem newProjectToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sharePointToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sFAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bWMPdbInformacjeToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox13;
     }
 }

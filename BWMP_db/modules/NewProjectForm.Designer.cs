@@ -133,11 +133,12 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(403, 342);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button3.Location = new System.Drawing.Point(395, 342);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 23);
             this.button3.TabIndex = 10;
-            this.button3.Text = "button3";
+            this.button3.Text = "Open SFA Folder";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -416,11 +417,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(450, 149);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(403, 135);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
+            this.button1.Text = "Share Point";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // groupBox5

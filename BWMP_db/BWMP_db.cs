@@ -58,6 +58,7 @@ namespace BWMP_db
             dataGridView1.Columns["PoChecked"].Visible = false;
             dataGridView1.Columns["NOrderClosed"].Visible = false;
 
+            Count();
 
         }
 
@@ -70,6 +71,50 @@ namespace BWMP_db
             //textboxVesselId.Text = "";
             //textboxVesselName.Text = "";
             //comboboxVesselStatus.Text = "";
+        }
+
+        //=======================================//
+        // Count project and put into labelCount //
+        //=======================================//
+        public void Count()
+        { 
+        string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
+        SqlConnection conn = new SqlConnection(myconnstrng);
+            conn.Open();
+            SqlCommand commOpen = new SqlCommand("SELECT COUNT(*) FROM data WHERE VesselStatus='Open'", conn);
+            SqlCommand commOnHold = new SqlCommand("SELECT COUNT(*) FROM data WHERE VesselStatus='OnHold'", conn);
+            SqlCommand commTotal = new SqlCommand("SELECT COUNT(*) FROM data WHERE VesselStatus='Open' or VesselStatus='OnHold'", conn);
+            Int32 countOpen = Convert.ToInt32(commOpen.ExecuteScalar());
+            Int32 countOnHold = Convert.ToInt32(commOnHold.ExecuteScalar());
+            Int32 countTotal = Convert.ToInt32(commTotal.ExecuteScalar());
+            if (countOpen>0)
+            {
+                labelCountOpen.Text = "Open projects: " + Convert.ToString(countOpen.ToString());
+            }
+            else
+            {
+                labelCountOpen.Text = "Open projects: 0";
+            }
+            if (countOnHold>0)
+            {
+                labelCountOnHold.Text = "OnHold projects: " + Convert.ToString(countOnHold.ToString());
+            }
+            else
+            {
+                labelCountOnHold.Text = "OnHold projects: 0";
+            }
+            if (countTotal>0)
+            {
+                labelCountTotal.Text = "Total projects: " + Convert.ToString(countTotal.ToString());
+            }
+            else
+            {
+                labelCountTotal.Text = "Total projects: 0";
+            }
+            conn.Close();
+
+
+            
         }
 
         //=====================================================//
@@ -194,10 +239,7 @@ namespace BWMP_db
                         break;
                     
                 }
-                //Open
-                //Close
-                //OnHold
-                //Piraeus
+
             }
             else
             {
@@ -319,7 +361,7 @@ namespace BWMP_db
 
         private void bWMPdbInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Version 1.8 Stable", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Version 2.0 Stable\n test", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //
@@ -335,6 +377,10 @@ namespace BWMP_db
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+
+
+
 
         //===============//
         // Open New Form //
@@ -419,5 +465,7 @@ namespace BWMP_db
         {
             Process.Start("www.wp.pl");
         }
+
+
     }
 }

@@ -61,7 +61,10 @@ namespace BWMP_db.modules
                 {
                     // Successfully inserted into database.
                     //MessageBox.Show("New BWMP succesfully inserted", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                     Close();
+                    
+                    
                     
                     
 
