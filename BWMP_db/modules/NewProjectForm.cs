@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -97,6 +98,16 @@ namespace BWMP_db.modules
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://groups.dnvgl.com/sites/bwmp-exchange/Lists/BWMP%20Production%20List/BWMP%20Production%20List.aspx");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"P:\tebpl350\04 Sales\04-3 Project Agreements\04-3-10 Special Projects\BWMP group");
         }
     }
 }

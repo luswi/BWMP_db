@@ -58,8 +58,123 @@ namespace BWMP_db
             dataGridView1.Columns["PoChecked"].Visible = false;
             dataGridView1.Columns["NOrderClosed"].Visible = false;
 
+            // import row 0 as default start ->
+            textboxMainId.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+            labelVesselIdData.Text = dataGridView1.Rows[0].Cells[1].Value.ToString();
+            labelVesselNameData.Text = dataGridView1.Rows[0].Cells[2].Value.ToString();
+            labelVesselStatusData.Text = dataGridView1.Rows[0].Cells[3].Value.ToString();
+            labelVesselLcsData.Text = dataGridView1.Rows[0].Cells[4].Value.ToString();
+            labelVesselMethodSeqData.Text = dataGridView1.Rows[0].Cells[5].Value.ToString();
+            labelVesselMethodFtData.Text = dataGridView1.Rows[0].Cells[6].Value.ToString();
+            labelVesselMethodDilData.Text = dataGridView1.Rows[0].Cells[7].Value.ToString();
+            labelSfaCreatedData.Text = dataGridView1.Rows[0].Cells[8].Value.ToString();
+            labelSfaSentData.Text = dataGridView1.Rows[0].Cells[9].Value.ToString();
+            labelNOrderData.Text = dataGridView1.Rows[0].Cells[10].Value.ToString();
+            labelSfaRecData.Text = dataGridView1.Rows[0].Cells[11].Value.ToString();
+
+            labelAppStageData.Text = dataGridView1.Rows[0].Cells[12].Value.ToString();
+            labelCertificateData.Text = dataGridView1.Rows[0].Cells[13].Value.ToString();
+            labelSharePointData.Text = dataGridView1.Rows[0].Cells[14].Value.ToString();
+            // Hours for project
+            double hmax = double.Parse(dataGridView1.Rows[0].Cells[15].Value.ToString());
+            double hused = double.Parse(dataGridView1.Rows[0].Cells[17].Value.ToString());
+            double hrev = double.Parse(dataGridView1.Rows[0].Cells[16].Value.ToString());
+            double hleft = (hmax + hrev) - hused;
+            labelHmaxData.Text = hmax.ToString();
+            labelHaddData.Text = hrev.ToString();
+            labelHusedData.Text = hused.ToString();
+            labelHleftData.Text = hleft.ToString();
+
+            textBoxNotesData.Text = dataGridView1.Rows[0].Cells[18].Value.ToString();
+            labelPoCheckedData.Text = dataGridView1.Rows[0].Cells[19].Value.ToString();
+            labelNOrderClosedData.Text = dataGridView1.Rows[0].Cells[20].Value.ToString();
+
+
+            // condition check and show image Yes/No.
+
+            // LCS / Methods If nothing then No if selected anything then Yes
+            if (labelVesselLcsData.Text == "") { pbLcsStatus.Image = Properties.Resources.no; }
+            else { pbLcsStatus.Image = Properties.Resources.yes; }
+            if (labelVesselMethodSeqData.Text == "") { pbSeqStatus.Image = Properties.Resources.no; }
+            else { pbSeqStatus.Image = Properties.Resources.yes; }
+            if (labelVesselMethodFtData.Text == "") { pbFtStatus.Image = Properties.Resources.no; }
+            else { pbFtStatus.Image = Properties.Resources.yes; }
+            if (labelVesselMethodDilData.Text == "") { pbDilStatus.Image = Properties.Resources.no; }
+            else { pbDilStatus.Image = Properties.Resources.yes; }
+            //labelVesselMethodDil.ForeColor = System.Drawing.Color.Red;
+
+
+            // SFA / NOrder
+            if (labelSfaCreatedData.Text == "Yes" || labelSfaCreatedData.Text == "SC") { pbSfaCreatedStatus.Image = Properties.Resources.yes; }
+            else { pbSfaCreatedStatus.Image = Properties.Resources.no; }
+            if (labelSfaSentData.Text == "Yes" || labelSfaSentData.Text == "SC") { pbSfaSentStatus.Image = Properties.Resources.yes; }
+            else { pbSfaSentStatus.Image = Properties.Resources.no; }
+            if (labelNOrderData.Text == "Yes") { pbNOrderStatus.Image = Properties.Resources.yes; }
+            else { pbNOrderStatus.Image = Properties.Resources.no; }
+            if (labelSfaRecData.Text == "Yes" || labelSfaRecData.Text == "SC") { pbSfaRecStatus.Image = Properties.Resources.yes; }
+            else { pbSfaRecStatus.Image = Properties.Resources.no; }
+
+            // BWMP Approval
+            string AppStagecheck = labelAppStageData.Text;
+            switch (AppStagecheck)
+            {
+                case "pre-check":
+                    labelAppStageData.BackColor = System.Drawing.Color.White;
+                    break;
+                case "Started":
+                    labelAppStageData.BackColor = System.Drawing.Color.Orange;
+                    break;
+                case "Approved":
+                    labelAppStageData.BackColor = System.Drawing.Color.Green;
+                    break;
+                case "SC":
+                    labelAppStageData.BackColor = System.Drawing.Color.Green;
+                    break;
+                case "Verification":
+                    labelAppStageData.BackColor = System.Drawing.Color.Yellow;
+                    break;
+                case "Rev.":
+                    labelAppStageData.BackColor = System.Drawing.Color.Purple;
+                    break;
+            }
+
+            if (labelCertificateData.Text == "Yes" || labelCertificateData.Text == "SC") { pbCertificateStatus.Image = Properties.Resources.yes; }
+            else { pbCertificateStatus.Image = Properties.Resources.no; }
+
+            if (labelSharePointData.Text == "Update!") { pbSharePointStatus.Image = Properties.Resources.no; }
+            else { pbSharePointStatus.Image = Properties.Resources.yes; }
+
+            // Invoice
+            if (labelPoCheckedData.Text == "Yes") { pbPoChechedStatus.Image = Properties.Resources.yes; }
+            else { pbPoChechedStatus.Image = Properties.Resources.no; }
+            if (labelNOrderClosedData.Text == "Yes") { pbNOrderClosedStatus.Image = Properties.Resources.yes; }
+            else { pbNOrderClosedStatus.Image = Properties.Resources.no; }
+
+            // BWMP Status
+            string VesselStatuscheck = labelVesselStatusData.Text;
+            switch (VesselStatuscheck)
+            {
+                case "Open":
+                    labelVesselStatusData.BackColor = System.Drawing.Color.CornflowerBlue;
+                    break;
+                case "Closed":
+                    labelVesselStatusData.BackColor = System.Drawing.Color.Green;
+                    break;
+                case "OnHold":
+                    labelVesselStatusData.BackColor = System.Drawing.Color.Orange;
+                    break;
+                case "Piraeus":
+                    labelVesselStatusData.BackColor = System.Drawing.Color.Green;
+                    break;
+
+            }
+            // <- end
+
+
+
             Count();
 
+            
         }
 
         //==============//
@@ -153,14 +268,12 @@ namespace BWMP_db
                 labelHusedData.Text = hused.ToString();
                 labelHleftData.Text = hleft.ToString();
 
-
-
                 textBoxNotesData.Text = dataGridView1.Rows[rowIndex].Cells[18].Value.ToString();
                 labelPoCheckedData.Text = dataGridView1.Rows[rowIndex].Cells[19].Value.ToString();
                 labelNOrderClosedData.Text = dataGridView1.Rows[rowIndex].Cells[20].Value.ToString();
 
                 
-                // condition check and show image Yes/No.
+                // Condition check and show image Yes/No.
 
                 // LCS / Methods If nothing then No if selected anything then Yes
                 if (labelVesselLcsData.Text == "") { pbLcsStatus.Image = Properties.Resources.no; }
@@ -173,7 +286,6 @@ namespace BWMP_db
                 else { pbDilStatus.Image = Properties.Resources.yes; }
                 //labelVesselMethodDil.ForeColor = System.Drawing.Color.Red;
                 
-
                 // SFA / NOrder
                 if (labelSfaCreatedData.Text == "Yes" || labelSfaCreatedData.Text == "SC") { pbSfaCreatedStatus.Image = Properties.Resources.yes; }
                 else { pbSfaCreatedStatus.Image = Properties.Resources.no; }
@@ -185,7 +297,6 @@ namespace BWMP_db
                 else { pbSfaRecStatus.Image = Properties.Resources.no; }
 
                 // BWMP Approval
-
                 string AppStagecheck = labelAppStageData.Text;
                 switch (AppStagecheck)
                 {
@@ -221,14 +332,14 @@ namespace BWMP_db
                 if (labelNOrderClosedData.Text == "Yes") { pbNOrderClosedStatus.Image = Properties.Resources.yes; }
                 else { pbNOrderClosedStatus.Image = Properties.Resources.no; }
 
-                // Status
+                // BWMP Status
                 string VesselStatuscheck = labelVesselStatusData.Text;
                 switch (VesselStatuscheck)
                 {
                     case "Open":
                         labelVesselStatusData.BackColor = System.Drawing.Color.CornflowerBlue;
                         break;
-                    case "Closed":
+                    case "Close":
                         labelVesselStatusData.BackColor = System.Drawing.Color.Green;
                         break;
                     case "OnHold":
@@ -247,6 +358,11 @@ namespace BWMP_db
             }
 
         }
+
+
+
+
+
 
         //==============//
         // Clear button //
@@ -355,18 +471,44 @@ namespace BWMP_db
             }
         }
 
-        //
-        // menu info 
-        //
+        //==========//
+        // Top menu //
+        //==========//
 
         private void bWMPdbInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Version 2.0 Stable\n test", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Version 2.0 Stable\n More info: LUSWI", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        //
-        // When new add and close then refresh datagrid.
-        //
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            buttonEditShow_Click(new object(), new EventArgs());
+
+        }
+
+        private void newProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            buttonNew_Click(new object(), new EventArgs());
+        }
+
+        private void sharePointToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://groups.dnvgl.com/sites/bwmp-exchange/Lists/BWMP%20Production%20List/BWMP%20Production%20List.aspx");
+        }
+
+        private void sFAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"P:\tebpl350\04 Sales\04-3 Project Agreements\04-3-10 Special Projects\BWMP group");
+        }
+
+        //===============================================//
+        // When new add and close then refresh datagrid. //
+        //===============================================//
 
         private void BWMP_db_Activated(object sender, EventArgs e)
         {
@@ -378,10 +520,6 @@ namespace BWMP_db
             dataGridView1.DataSource = dt;
         }
 
-
-
-
-
         //===============//
         // Open New Form //
         //===============//
@@ -392,9 +530,6 @@ namespace BWMP_db
             modules.NewProjectForm newProject = new modules.NewProjectForm();
             newProject.ShowDialog();
         }
-
-
-
 
 
         //================//
@@ -451,20 +586,6 @@ namespace BWMP_db
             editProject.ShowDialog();
         }
 
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonSfa_Click(object sender, EventArgs e)
-        {
-            Process.Start(@"c:\");
-        }
-
-        private void buttonOracle_Click(object sender, EventArgs e)
-        {
-            Process.Start("www.wp.pl");
-        }
 
 
     }

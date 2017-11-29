@@ -122,8 +122,6 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textboxMainId = new System.Windows.Forms.TextBox();
-            this.buttonSfa = new System.Windows.Forms.Button();
-            this.buttonOracle = new System.Windows.Forms.Button();
             this.labelCountTotal = new System.Windows.Forms.Label();
             this.labelCountOpen = new System.Windows.Forms.Label();
             this.labelCountOnHold = new System.Windows.Forms.Label();
@@ -282,20 +280,23 @@
             // newProjectToolStripMenuItem
             // 
             this.newProjectToolStripMenuItem.Name = "newProjectToolStripMenuItem";
-            this.newProjectToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.newProjectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newProjectToolStripMenuItem.Text = "New Project";
+            this.newProjectToolStripMenuItem.Click += new System.EventHandler(this.newProjectToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
@@ -309,14 +310,16 @@
             // sharePointToolStripMenuItem
             // 
             this.sharePointToolStripMenuItem.Name = "sharePointToolStripMenuItem";
-            this.sharePointToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.sharePointToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sharePointToolStripMenuItem.Text = "SharePoint";
+            this.sharePointToolStripMenuItem.Click += new System.EventHandler(this.sharePointToolStripMenuItem_Click);
             // 
             // sFAToolStripMenuItem
             // 
             this.sFAToolStripMenuItem.Name = "sFAToolStripMenuItem";
-            this.sFAToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.sFAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sFAToolStripMenuItem.Text = "SFA";
+            this.sFAToolStripMenuItem.Click += new System.EventHandler(this.sFAToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -846,7 +849,7 @@
             this.label13.Size = new System.Drawing.Size(82, 20);
             this.label13.TabIndex = 11;
             this.label13.Text = "Time used";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+
             // 
             // label15
             // 
@@ -1129,28 +1132,6 @@
             this.textboxMainId.TabIndex = 15;
             this.textboxMainId.Visible = false;
             // 
-            // buttonSfa
-            // 
-            this.buttonSfa.Location = new System.Drawing.Point(1004, 537);
-            this.buttonSfa.Name = "buttonSfa";
-            this.buttonSfa.Size = new System.Drawing.Size(75, 23);
-            this.buttonSfa.TabIndex = 31;
-            this.buttonSfa.Text = "Open SFA Folder";
-            this.buttonSfa.UseVisualStyleBackColor = true;
-            this.buttonSfa.Visible = false;
-            this.buttonSfa.Click += new System.EventHandler(this.buttonSfa_Click);
-            // 
-            // buttonOracle
-            // 
-            this.buttonOracle.Location = new System.Drawing.Point(1004, 577);
-            this.buttonOracle.Name = "buttonOracle";
-            this.buttonOracle.Size = new System.Drawing.Size(75, 23);
-            this.buttonOracle.TabIndex = 32;
-            this.buttonOracle.Text = "Oracle";
-            this.buttonOracle.UseVisualStyleBackColor = true;
-            this.buttonOracle.Visible = false;
-            this.buttonOracle.Click += new System.EventHandler(this.buttonOracle_Click);
-            // 
             // labelCountTotal
             // 
             this.labelCountTotal.AutoSize = true;
@@ -1196,8 +1177,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.groupBox13);
-            this.Controls.Add(this.buttonOracle);
-            this.Controls.Add(this.buttonSfa);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.groupBox6);
@@ -1349,8 +1328,6 @@
         private System.Windows.Forms.Label labelNOrderClosedData;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textboxMainId;
-        private System.Windows.Forms.Button buttonSfa;
-        private System.Windows.Forms.Button buttonOracle;
         private System.Windows.Forms.PictureBox pbCertificateStatus;
         private System.Windows.Forms.PictureBox pbPoChechedStatus;
         private System.Windows.Forms.PictureBox pbNOrderClosedStatus;

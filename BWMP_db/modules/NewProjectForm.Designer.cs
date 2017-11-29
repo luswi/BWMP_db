@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewProjectForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonSFA = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboboxNOrder = new System.Windows.Forms.ComboBox();
             this.comboboxSfaRec = new System.Windows.Forms.ComboBox();
@@ -57,7 +57,7 @@
             this.textboxVesselId = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSP = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textboxNotes = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -119,7 +119,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.buttonSFA);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -131,15 +131,16 @@
             this.tabPage1.Text = "Main Informations ->";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonSFA
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(395, 342);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Open SFA Folder";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonSFA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSFA.Location = new System.Drawing.Point(395, 340);
+            this.buttonSFA.Name = "buttonSFA";
+            this.buttonSFA.Size = new System.Drawing.Size(100, 23);
+            this.buttonSFA.TabIndex = 10;
+            this.buttonSFA.Text = "Open SFA Folder";
+            this.buttonSFA.UseVisualStyleBackColor = true;
+            this.buttonSFA.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox3
             // 
@@ -403,7 +404,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.buttonSP);
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.groupBox4);
@@ -415,15 +416,16 @@
             this.tabPage2.Text = "Approval Process ->";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonSP
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(403, 135);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Share Point";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSP.Location = new System.Drawing.Point(395, 108);
+            this.buttonSP.Name = "buttonSP";
+            this.buttonSP.Size = new System.Drawing.Size(75, 23);
+            this.buttonSP.TabIndex = 10;
+            this.buttonSP.Text = "Share Point";
+            this.buttonSP.UseVisualStyleBackColor = true;
+            this.buttonSP.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox5
             // 
@@ -810,7 +812,7 @@
         private System.Windows.Forms.ComboBox comboboxNOrderClosed;
         private System.Windows.Forms.ComboBox comboboxPoChecked;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonSP;
+        private System.Windows.Forms.Button buttonSFA;
     }
 }
