@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_11DBAD4EFEF14F8F8B800177165CC58D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_A6D96730CEFE450E9D1E90559F53A3C2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -40,13 +34,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E16A93D171B1E9CDCF6711CD8A986DEA"
+        "OwnerKey" = "8:_F255401A8B0D4590BC73D90A558D0646"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F255401A8B0D4590BC73D90A558D0646"
+        "OwnerKey" = "8:_E16A93D171B1E9CDCF6711CD8A986DEA"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -67,6 +61,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -83,6 +93,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -112,26 +138,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_11DBAD4EFEF14F8F8B800177165CC58D"
-            {
-            "SourcePath" = "8:..\\BWMP_db\\database.mdf"
-            "TargetName" = "8:database.mdf"
-            "Tag" = "8:"
-            "Folder" = "8:_A97D2BB0EF1A47C899731561628C6F0D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A6D96730CEFE450E9D1E90559F53A3C2"
             {
             "SourcePath" = "8:..\\BWMP_db\\img\\vessel.ico"
@@ -159,11 +165,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_E16A93D171B1E9CDCF6711CD8A986DEA"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -249,9 +250,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Setup"
+        "ProductName" = "8:BWMP_db"
         "ProductCode" = "8:{757E8AD5-4920-4841-8D4E-10C30E0D8E58}"
-        "PackageCode" = "8:{1295B497-BF20-4751-866E-66E7713D5CF1}"
+        "PackageCode" = "8:{A3E23996-BC7C-44DE-977C-FD26BB11A747}"
         "UpgradeCode" = "8:{F0085799-819D-4F04-8120-A278B504628F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -259,10 +260,10 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:DNV GL"
+        "Manufacturer" = "8:LUSWI"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Setup"
+        "Title" = "8:BWMP_db"
         "Subject" = "8:"
         "ARPCONTACT" = "8:LUSWI"
         "Keywords" = "8:"
@@ -396,7 +397,7 @@
             "Target" = "8:_F255401A8B0D4590BC73D90A558D0646"
             "Folder" = "8:_F15768107F0E441DA3501400F94C9436"
             "WorkingFolder" = "8:_A97D2BB0EF1A47C899731561628C6F0D"
-            "Icon" = "8:"
+            "Icon" = "8:_A6D96730CEFE450E9D1E90559F53A3C2"
             "Feature" = "8:"
             }
         }
@@ -798,9 +799,37 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C9947F840BBB41D1811A36FAB8CA3AA7"
+            {
+            "SourcePath" = "8:"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_A97D2BB0EF1A47C899731561628C6F0D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:ContentFiles"
+            "OutputProjectGuid" = "8:{D3E01A7C-941B-448B-908A-B20665FF3008}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F255401A8B0D4590BC73D90A558D0646"
             {
-            "SourcePath" = "8:..\\BWMP_db\\obj\\Debug\\BWMP_db.exe"
+            "SourcePath" = "8:..\\BWMP_db\\obj\\Release\\BWMP_db.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_A97D2BB0EF1A47C899731561628C6F0D"

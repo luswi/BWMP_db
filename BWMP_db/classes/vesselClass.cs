@@ -120,6 +120,8 @@ namespace BWMP_db.classes
                 if(rows>0)
                 {
                     isSuccess = true;
+
+                                        
                 }
                 else
                 {
@@ -130,6 +132,7 @@ namespace BWMP_db.classes
             finally
             {
                 conn.Close();
+                
             }
             return isSuccess;
         }

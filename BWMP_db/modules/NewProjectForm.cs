@@ -62,8 +62,10 @@ namespace BWMP_db.modules
                 {
                     // Successfully inserted into database.
                     //MessageBox.Show("New BWMP succesfully inserted", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     
                     Close();
+                
                     
                     
                     
@@ -109,5 +111,6 @@ namespace BWMP_db.modules
         {
             Process.Start(@"P:\tebpl350\04 Sales\04-3 Project Agreements\04-3-10 Special Projects\BWMP group");
         }
+
     }
 }
