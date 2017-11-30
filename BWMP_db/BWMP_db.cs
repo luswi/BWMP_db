@@ -391,36 +391,45 @@ namespace BWMP_db
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to delete project ?", "Delete?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            // if something selected then edit, else do nothing.
+            if (labelVesselNameData.Text != "show")
             {
-                // Get MainId.
-                v.MainId = Convert.ToInt32(textboxMainId.Text);
-                bool isSuccess = v.Delete(v);
-                if (isSuccess == true)
+                if (MessageBox.Show("Do you want to delete project ?", "Delete?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    // If successfully deleted.
-                    MessageBox.Show("Data deleted");
-                    // Refresh data.
+                    // Get MainId.
+                    v.MainId = Convert.ToInt32(textboxMainId.Text);
+                    bool isSuccess = v.Delete(v);
+                    if (isSuccess == true)
+                    {
+                        // If successfully deleted.
+                        MessageBox.Show("Data deleted");
+                        // Refresh data.
 
-                    //DataTable dt = v.Select();
-                    //dataGridView1.DataSource = dt;
-                    //Clear();
+                        //DataTable dt = v.Select();
+                        //dataGridView1.DataSource = dt;
+                        //Clear();
 
-                    string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
-                    SqlConnection conn = new SqlConnection(myconnstrng);
-                    SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open' OR VesselStatus Like 'OnHold'", conn);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    dataGridView1.DataSource = dt;
+                        string myconnstrng = ConfigurationManager.ConnectionStrings["BWMP_db.Properties.Settings.databaseConnectionString"].ConnectionString;
+                        SqlConnection conn = new SqlConnection(myconnstrng);
+                        SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM data WHERE VesselStatus LIKE 'Open' OR VesselStatus Like 'OnHold'", conn);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        dataGridView1.DataSource = dt;
 
 
+                    }
+                    else
+                    {
+                        // If failed.
+                        MessageBox.Show("Something goes wrong");
+                    }
                 }
                 else
                 {
-                    // If failed.
-                    MessageBox.Show("Something goes wrong");
+                    Exception ex;
                 }
             }
+  
 
 
             
@@ -557,7 +566,7 @@ namespace BWMP_db
             modules.EditProjectForm editProject = new modules.EditProjectForm();
 
 
-            // if something selected dent edit, else do nothing.
+            // if something selected then edit, else do nothing.
             if (labelVesselNameData.Text != "show")
             {
                 v.MainId = int.Parse(textboxMainId.Text);
